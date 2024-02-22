@@ -41,38 +41,65 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target DuoDyno
+# Object build statements for EXECUTABLE target sample
 
 
 #############################################
-# Order-only phony target for DuoDyno
+# Order-only phony target for sample
 
-build cmake_object_order_depends_target_DuoDyno: phony || CMakeFiles/DuoDyno.dir
+build cmake_object_order_depends_target_sample: phony || cmake_object_order_depends_target_METAL_CPP cmake_object_order_depends_target_glad cmake_object_order_depends_target_glfw
 
-build CMakeFiles/DuoDyno.dir/main.cpp.o: CXX_COMPILER__DuoDyno_unscanned_Debug /Users/hyc/projects/cpp/DuoDyno/main.cpp || cmake_object_order_depends_target_DuoDyno
-  DEP_FILE = CMakeFiles/DuoDyno.dir/main.cpp.o.d
-  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/DuoDyno.dir
-  OBJECT_FILE_DIR = CMakeFiles/DuoDyno.dir
-  TARGET_COMPILE_PDB = CMakeFiles/DuoDyno.dir/
-  TARGET_PDB = DuoDyno.pdb
+build CMakeFiles/sample.dir/main.cpp.o: CXX_COMPILER__sample_unscanned_Debug /Users/hyc/projects/cpp/DuoDyno/main.cpp || cmake_object_order_depends_target_sample
+  DEP_FILE = CMakeFiles/sample.dir/main.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -fcolor-diagnostics
+  INCLUDES = -I/Users/hyc/projects/cpp/DuoDyno/include -I/Users/hyc/projects/cpp/DuoDyno/include/view/common -I/Users/hyc/projects/cpp/DuoDyno/extern/glfw/include -I/Users/hyc/projects/cpp/DuoDyno/extern/glad/include -I/Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/metal-cpp -I/Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/metal-cpp-extensions -I/Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/metal-cpp -I/Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/metal-cpp-extensions
+  OBJECT_DIR = CMakeFiles/sample.dir
+  OBJECT_FILE_DIR = CMakeFiles/sample.dir
+
+build CMakeFiles/sample.dir/src/view/common/shape.cpp.o: CXX_COMPILER__sample_unscanned_Debug /Users/hyc/projects/cpp/DuoDyno/src/view/common/shape.cpp || cmake_object_order_depends_target_sample
+  DEP_FILE = CMakeFiles/sample.dir/src/view/common/shape.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -fcolor-diagnostics
+  INCLUDES = -I/Users/hyc/projects/cpp/DuoDyno/include -I/Users/hyc/projects/cpp/DuoDyno/include/view/common -I/Users/hyc/projects/cpp/DuoDyno/extern/glfw/include -I/Users/hyc/projects/cpp/DuoDyno/extern/glad/include -I/Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/metal-cpp -I/Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/metal-cpp-extensions -I/Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/metal-cpp -I/Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/metal-cpp-extensions
+  OBJECT_DIR = CMakeFiles/sample.dir
+  OBJECT_FILE_DIR = CMakeFiles/sample.dir/src/view/common
+
+build CMakeFiles/sample.dir/src/view/common/shape_factory.cpp.o: CXX_COMPILER__sample_unscanned_Debug /Users/hyc/projects/cpp/DuoDyno/src/view/common/shape_factory.cpp || cmake_object_order_depends_target_sample
+  DEP_FILE = CMakeFiles/sample.dir/src/view/common/shape_factory.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -fcolor-diagnostics
+  INCLUDES = -I/Users/hyc/projects/cpp/DuoDyno/include -I/Users/hyc/projects/cpp/DuoDyno/include/view/common -I/Users/hyc/projects/cpp/DuoDyno/extern/glfw/include -I/Users/hyc/projects/cpp/DuoDyno/extern/glad/include -I/Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/metal-cpp -I/Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/metal-cpp-extensions -I/Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/metal-cpp -I/Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/metal-cpp-extensions
+  OBJECT_DIR = CMakeFiles/sample.dir
+  OBJECT_FILE_DIR = CMakeFiles/sample.dir/src/view/common
+
+build CMakeFiles/sample.dir/src/view/window.cpp.o: CXX_COMPILER__sample_unscanned_Debug /Users/hyc/projects/cpp/DuoDyno/src/view/window.cpp || cmake_object_order_depends_target_sample
+  DEP_FILE = CMakeFiles/sample.dir/src/view/window.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -fcolor-diagnostics
+  INCLUDES = -I/Users/hyc/projects/cpp/DuoDyno/include -I/Users/hyc/projects/cpp/DuoDyno/include/view/common -I/Users/hyc/projects/cpp/DuoDyno/extern/glfw/include -I/Users/hyc/projects/cpp/DuoDyno/extern/glad/include -I/Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/metal-cpp -I/Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/metal-cpp-extensions -I/Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/metal-cpp -I/Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/metal-cpp-extensions
+  OBJECT_DIR = CMakeFiles/sample.dir
+  OBJECT_FILE_DIR = CMakeFiles/sample.dir/src/view
+
+build CMakeFiles/sample.dir/src/view/renderer.cpp.o: CXX_COMPILER__sample_unscanned_Debug /Users/hyc/projects/cpp/DuoDyno/src/view/renderer.cpp || cmake_object_order_depends_target_sample
+  DEP_FILE = CMakeFiles/sample.dir/src/view/renderer.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -fcolor-diagnostics
+  INCLUDES = -I/Users/hyc/projects/cpp/DuoDyno/include -I/Users/hyc/projects/cpp/DuoDyno/include/view/common -I/Users/hyc/projects/cpp/DuoDyno/extern/glfw/include -I/Users/hyc/projects/cpp/DuoDyno/extern/glad/include -I/Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/metal-cpp -I/Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/metal-cpp-extensions -I/Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/metal-cpp -I/Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/metal-cpp-extensions
+  OBJECT_DIR = CMakeFiles/sample.dir
+  OBJECT_FILE_DIR = CMakeFiles/sample.dir/src/view
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target DuoDyno
+# Link build statements for EXECUTABLE target sample
 
 
 #############################################
-# Link the executable DuoDyno
+# Link the executable sample
 
-build DuoDyno: CXX_EXECUTABLE_LINKER__DuoDyno_Debug CMakeFiles/DuoDyno.dir/main.cpp.o
+build sample: CXX_EXECUTABLE_LINKER__sample_Debug CMakeFiles/sample.dir/main.cpp.o CMakeFiles/sample.dir/src/view/common/shape.cpp.o CMakeFiles/sample.dir/src/view/common/shape_factory.cpp.o CMakeFiles/sample.dir/src/view/window.cpp.o CMakeFiles/sample.dir/src/view/renderer.cpp.o | extern/glfw/src/libglfw3.a extern/glad/libglad.a extern/metal-cpp/libMETAL_CPP.a || extern/glad/libglad.a extern/glfw/src/libglfw3.a extern/metal-cpp/libMETAL_CPP.a
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1
-  OBJECT_DIR = CMakeFiles/DuoDyno.dir
+  LINK_LIBRARIES = extern/glfw/src/libglfw3.a  extern/glad/libglad.a  extern/metal-cpp/libMETAL_CPP.a  -framework Cocoa  -framework IOKit  -framework CoreFoundation  -framework Metal  -framework MetalKit  -framework AppKit  -framework Foundation  -framework QuartzCore  -framework Metal  -framework MetalKit  -framework AppKit  -framework Foundation  -framework QuartzCore
+  OBJECT_DIR = CMakeFiles/sample.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/DuoDyno.dir/
-  TARGET_FILE = DuoDyno
-  TARGET_PDB = DuoDyno.pdb
+  TARGET_FILE = sample
+  TARGET_PDB = sample.dbg
 
 
 #############################################
@@ -97,8 +124,1180 @@ build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
+
+#############################################
+# Utility command for list_install_components
+
+build list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build CMakeFiles/install.util: CUSTOM_COMMAND all
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build install: phony CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build CMakeFiles/install/local.util: CUSTOM_COMMAND all
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build install/local: phony CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build CMakeFiles/install/strip.util: CUSTOM_COMMAND all
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build install/strip: phony CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/hyc/projects/cpp/DuoDyno/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for uninstall
+
+build extern/glfw/uninstall: phony extern/glfw/CMakeFiles/uninstall
+
+
+#############################################
+# Utility command for edit_cache
+
+build extern/glfw/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/glfw && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build extern/glfw/edit_cache: phony extern/glfw/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build extern/glfw/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/glfw && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S/Users/hyc/projects/cpp/DuoDyno -B/Users/hyc/projects/cpp/DuoDyno/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build extern/glfw/rebuild_cache: phony extern/glfw/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build extern/glfw/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build extern/glfw/CMakeFiles/install.util: CUSTOM_COMMAND extern/glfw/all
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/glfw && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build extern/glfw/install: phony extern/glfw/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build extern/glfw/CMakeFiles/install/local.util: CUSTOM_COMMAND extern/glfw/all
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/glfw && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build extern/glfw/install/local: phony extern/glfw/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build extern/glfw/CMakeFiles/install/strip.util: CUSTOM_COMMAND extern/glfw/all
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/glfw && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build extern/glfw/install/strip: phony extern/glfw/CMakeFiles/install/strip.util
+
+
+#############################################
+# Custom command for extern/glfw/CMakeFiles/uninstall
+
+build extern/glfw/CMakeFiles/uninstall | ${cmake_ninja_workdir}extern/glfw/CMakeFiles/uninstall: CUSTOM_COMMAND
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/glfw && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -P /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/glfw/cmake_uninstall.cmake
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/hyc/projects/cpp/DuoDyno/extern/glfw/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for update_mappings
+
+build extern/glfw/src/update_mappings: phony extern/glfw/src/CMakeFiles/update_mappings
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target glfw
+
+
+#############################################
+# Order-only phony target for glfw
+
+build cmake_object_order_depends_target_glfw: phony || extern/glfw/src/CMakeFiles/glfw.dir
+
+build extern/glfw/src/CMakeFiles/glfw.dir/context.c.o: C_COMPILER__glfw_unscanned_Debug /Users/hyc/projects/cpp/DuoDyno/extern/glfw/src/context.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = extern/glfw/src/CMakeFiles/glfw.dir/context.c.o.d
+  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -fPIC -fcolor-diagnostics -Wall
+  INCLUDES = -I/Users/hyc/projects/cpp/DuoDyno/include -I/Users/hyc/projects/cpp/DuoDyno/include/view/common -I/Users/hyc/projects/cpp/DuoDyno/extern/glfw/include -I/Users/hyc/projects/cpp/DuoDyno/extern/glfw/src -I/Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/glfw/src
+  OBJECT_DIR = extern/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = extern/glfw/src/CMakeFiles/glfw.dir
+
+build extern/glfw/src/CMakeFiles/glfw.dir/init.c.o: C_COMPILER__glfw_unscanned_Debug /Users/hyc/projects/cpp/DuoDyno/extern/glfw/src/init.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = extern/glfw/src/CMakeFiles/glfw.dir/init.c.o.d
+  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -fPIC -fcolor-diagnostics -Wall
+  INCLUDES = -I/Users/hyc/projects/cpp/DuoDyno/include -I/Users/hyc/projects/cpp/DuoDyno/include/view/common -I/Users/hyc/projects/cpp/DuoDyno/extern/glfw/include -I/Users/hyc/projects/cpp/DuoDyno/extern/glfw/src -I/Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/glfw/src
+  OBJECT_DIR = extern/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = extern/glfw/src/CMakeFiles/glfw.dir
+
+build extern/glfw/src/CMakeFiles/glfw.dir/input.c.o: C_COMPILER__glfw_unscanned_Debug /Users/hyc/projects/cpp/DuoDyno/extern/glfw/src/input.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = extern/glfw/src/CMakeFiles/glfw.dir/input.c.o.d
+  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -fPIC -fcolor-diagnostics -Wall
+  INCLUDES = -I/Users/hyc/projects/cpp/DuoDyno/include -I/Users/hyc/projects/cpp/DuoDyno/include/view/common -I/Users/hyc/projects/cpp/DuoDyno/extern/glfw/include -I/Users/hyc/projects/cpp/DuoDyno/extern/glfw/src -I/Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/glfw/src
+  OBJECT_DIR = extern/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = extern/glfw/src/CMakeFiles/glfw.dir
+
+build extern/glfw/src/CMakeFiles/glfw.dir/monitor.c.o: C_COMPILER__glfw_unscanned_Debug /Users/hyc/projects/cpp/DuoDyno/extern/glfw/src/monitor.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = extern/glfw/src/CMakeFiles/glfw.dir/monitor.c.o.d
+  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -fPIC -fcolor-diagnostics -Wall
+  INCLUDES = -I/Users/hyc/projects/cpp/DuoDyno/include -I/Users/hyc/projects/cpp/DuoDyno/include/view/common -I/Users/hyc/projects/cpp/DuoDyno/extern/glfw/include -I/Users/hyc/projects/cpp/DuoDyno/extern/glfw/src -I/Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/glfw/src
+  OBJECT_DIR = extern/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = extern/glfw/src/CMakeFiles/glfw.dir
+
+build extern/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o: C_COMPILER__glfw_unscanned_Debug /Users/hyc/projects/cpp/DuoDyno/extern/glfw/src/vulkan.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = extern/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o.d
+  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -fPIC -fcolor-diagnostics -Wall
+  INCLUDES = -I/Users/hyc/projects/cpp/DuoDyno/include -I/Users/hyc/projects/cpp/DuoDyno/include/view/common -I/Users/hyc/projects/cpp/DuoDyno/extern/glfw/include -I/Users/hyc/projects/cpp/DuoDyno/extern/glfw/src -I/Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/glfw/src
+  OBJECT_DIR = extern/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = extern/glfw/src/CMakeFiles/glfw.dir
+
+build extern/glfw/src/CMakeFiles/glfw.dir/window.c.o: C_COMPILER__glfw_unscanned_Debug /Users/hyc/projects/cpp/DuoDyno/extern/glfw/src/window.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = extern/glfw/src/CMakeFiles/glfw.dir/window.c.o.d
+  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -fPIC -fcolor-diagnostics -Wall
+  INCLUDES = -I/Users/hyc/projects/cpp/DuoDyno/include -I/Users/hyc/projects/cpp/DuoDyno/include/view/common -I/Users/hyc/projects/cpp/DuoDyno/extern/glfw/include -I/Users/hyc/projects/cpp/DuoDyno/extern/glfw/src -I/Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/glfw/src
+  OBJECT_DIR = extern/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = extern/glfw/src/CMakeFiles/glfw.dir
+
+build extern/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o: C_COMPILER__glfw_unscanned_Debug /Users/hyc/projects/cpp/DuoDyno/extern/glfw/src/cocoa_init.m || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = extern/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o.d
+  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -fPIC -fcolor-diagnostics -Wall
+  INCLUDES = -I/Users/hyc/projects/cpp/DuoDyno/include -I/Users/hyc/projects/cpp/DuoDyno/include/view/common -I/Users/hyc/projects/cpp/DuoDyno/extern/glfw/include -I/Users/hyc/projects/cpp/DuoDyno/extern/glfw/src -I/Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/glfw/src
+  OBJECT_DIR = extern/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = extern/glfw/src/CMakeFiles/glfw.dir
+
+build extern/glfw/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o: C_COMPILER__glfw_unscanned_Debug /Users/hyc/projects/cpp/DuoDyno/extern/glfw/src/cocoa_joystick.m || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = extern/glfw/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o.d
+  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -fPIC -fcolor-diagnostics -Wall
+  INCLUDES = -I/Users/hyc/projects/cpp/DuoDyno/include -I/Users/hyc/projects/cpp/DuoDyno/include/view/common -I/Users/hyc/projects/cpp/DuoDyno/extern/glfw/include -I/Users/hyc/projects/cpp/DuoDyno/extern/glfw/src -I/Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/glfw/src
+  OBJECT_DIR = extern/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = extern/glfw/src/CMakeFiles/glfw.dir
+
+build extern/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o: C_COMPILER__glfw_unscanned_Debug /Users/hyc/projects/cpp/DuoDyno/extern/glfw/src/cocoa_monitor.m || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = extern/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o.d
+  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -fPIC -fcolor-diagnostics -Wall
+  INCLUDES = -I/Users/hyc/projects/cpp/DuoDyno/include -I/Users/hyc/projects/cpp/DuoDyno/include/view/common -I/Users/hyc/projects/cpp/DuoDyno/extern/glfw/include -I/Users/hyc/projects/cpp/DuoDyno/extern/glfw/src -I/Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/glfw/src
+  OBJECT_DIR = extern/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = extern/glfw/src/CMakeFiles/glfw.dir
+
+build extern/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o: C_COMPILER__glfw_unscanned_Debug /Users/hyc/projects/cpp/DuoDyno/extern/glfw/src/cocoa_window.m || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = extern/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o.d
+  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -fPIC -fcolor-diagnostics -Wall
+  INCLUDES = -I/Users/hyc/projects/cpp/DuoDyno/include -I/Users/hyc/projects/cpp/DuoDyno/include/view/common -I/Users/hyc/projects/cpp/DuoDyno/extern/glfw/include -I/Users/hyc/projects/cpp/DuoDyno/extern/glfw/src -I/Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/glfw/src
+  OBJECT_DIR = extern/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = extern/glfw/src/CMakeFiles/glfw.dir
+
+build extern/glfw/src/CMakeFiles/glfw.dir/cocoa_time.c.o: C_COMPILER__glfw_unscanned_Debug /Users/hyc/projects/cpp/DuoDyno/extern/glfw/src/cocoa_time.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = extern/glfw/src/CMakeFiles/glfw.dir/cocoa_time.c.o.d
+  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -fPIC -fcolor-diagnostics -Wall
+  INCLUDES = -I/Users/hyc/projects/cpp/DuoDyno/include -I/Users/hyc/projects/cpp/DuoDyno/include/view/common -I/Users/hyc/projects/cpp/DuoDyno/extern/glfw/include -I/Users/hyc/projects/cpp/DuoDyno/extern/glfw/src -I/Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/glfw/src
+  OBJECT_DIR = extern/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = extern/glfw/src/CMakeFiles/glfw.dir
+
+build extern/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o: C_COMPILER__glfw_unscanned_Debug /Users/hyc/projects/cpp/DuoDyno/extern/glfw/src/posix_thread.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = extern/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o.d
+  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -fPIC -fcolor-diagnostics -Wall
+  INCLUDES = -I/Users/hyc/projects/cpp/DuoDyno/include -I/Users/hyc/projects/cpp/DuoDyno/include/view/common -I/Users/hyc/projects/cpp/DuoDyno/extern/glfw/include -I/Users/hyc/projects/cpp/DuoDyno/extern/glfw/src -I/Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/glfw/src
+  OBJECT_DIR = extern/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = extern/glfw/src/CMakeFiles/glfw.dir
+
+build extern/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o: C_COMPILER__glfw_unscanned_Debug /Users/hyc/projects/cpp/DuoDyno/extern/glfw/src/nsgl_context.m || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = extern/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o.d
+  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -fPIC -fcolor-diagnostics -Wall
+  INCLUDES = -I/Users/hyc/projects/cpp/DuoDyno/include -I/Users/hyc/projects/cpp/DuoDyno/include/view/common -I/Users/hyc/projects/cpp/DuoDyno/extern/glfw/include -I/Users/hyc/projects/cpp/DuoDyno/extern/glfw/src -I/Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/glfw/src
+  OBJECT_DIR = extern/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = extern/glfw/src/CMakeFiles/glfw.dir
+
+build extern/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o: C_COMPILER__glfw_unscanned_Debug /Users/hyc/projects/cpp/DuoDyno/extern/glfw/src/egl_context.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = extern/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o.d
+  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -fPIC -fcolor-diagnostics -Wall
+  INCLUDES = -I/Users/hyc/projects/cpp/DuoDyno/include -I/Users/hyc/projects/cpp/DuoDyno/include/view/common -I/Users/hyc/projects/cpp/DuoDyno/extern/glfw/include -I/Users/hyc/projects/cpp/DuoDyno/extern/glfw/src -I/Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/glfw/src
+  OBJECT_DIR = extern/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = extern/glfw/src/CMakeFiles/glfw.dir
+
+build extern/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o: C_COMPILER__glfw_unscanned_Debug /Users/hyc/projects/cpp/DuoDyno/extern/glfw/src/osmesa_context.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = extern/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o.d
+  FLAGS = -g -std=gnu99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -fPIC -fcolor-diagnostics -Wall
+  INCLUDES = -I/Users/hyc/projects/cpp/DuoDyno/include -I/Users/hyc/projects/cpp/DuoDyno/include/view/common -I/Users/hyc/projects/cpp/DuoDyno/extern/glfw/include -I/Users/hyc/projects/cpp/DuoDyno/extern/glfw/src -I/Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/glfw/src
+  OBJECT_DIR = extern/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = extern/glfw/src/CMakeFiles/glfw.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target glfw
+
+
+#############################################
+# Link the static library extern/glfw/src/libglfw3.a
+
+build extern/glfw/src/libglfw3.a: C_STATIC_LIBRARY_LINKER__glfw_Debug extern/glfw/src/CMakeFiles/glfw.dir/context.c.o extern/glfw/src/CMakeFiles/glfw.dir/init.c.o extern/glfw/src/CMakeFiles/glfw.dir/input.c.o extern/glfw/src/CMakeFiles/glfw.dir/monitor.c.o extern/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o extern/glfw/src/CMakeFiles/glfw.dir/window.c.o extern/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o extern/glfw/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o extern/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o extern/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o extern/glfw/src/CMakeFiles/glfw.dir/cocoa_time.c.o extern/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o extern/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o extern/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o extern/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o
+  ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = extern/glfw/src/CMakeFiles/glfw.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = extern/glfw/src/libglfw3.a
+  TARGET_PDB = glfw3.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build extern/glfw/src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/glfw/src && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build extern/glfw/src/edit_cache: phony extern/glfw/src/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build extern/glfw/src/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/glfw/src && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S/Users/hyc/projects/cpp/DuoDyno -B/Users/hyc/projects/cpp/DuoDyno/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build extern/glfw/src/rebuild_cache: phony extern/glfw/src/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build extern/glfw/src/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build extern/glfw/src/CMakeFiles/install.util: CUSTOM_COMMAND extern/glfw/src/all
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/glfw/src && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build extern/glfw/src/install: phony extern/glfw/src/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build extern/glfw/src/CMakeFiles/install/local.util: CUSTOM_COMMAND extern/glfw/src/all
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/glfw/src && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build extern/glfw/src/install/local: phony extern/glfw/src/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build extern/glfw/src/CMakeFiles/install/strip.util: CUSTOM_COMMAND extern/glfw/src/all
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/glfw/src && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build extern/glfw/src/install/strip: phony extern/glfw/src/CMakeFiles/install/strip.util
+
+
+#############################################
+# Custom command for extern/glfw/src/CMakeFiles/update_mappings
+
+build extern/glfw/src/CMakeFiles/update_mappings | ${cmake_ninja_workdir}extern/glfw/src/CMakeFiles/update_mappings: CUSTOM_COMMAND
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/extern/glfw/src && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -P /Users/hyc/projects/cpp/DuoDyno/extern/glfw/CMake/GenerateMappings.cmake mappings.h.in mappings.h
+  DESC = Updating gamepad mappings from upstream repository
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/hyc/projects/cpp/DuoDyno/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target glad
+
+
+#############################################
+# Order-only phony target for glad
+
+build cmake_object_order_depends_target_glad: phony || extern/glad/CMakeFiles/glad.dir
+
+build extern/glad/CMakeFiles/glad.dir/src/gles2.c.o: C_COMPILER__glad_unscanned_Debug /Users/hyc/projects/cpp/DuoDyno/extern/glad/src/gles2.c || cmake_object_order_depends_target_glad
+  DEP_FILE = extern/glad/CMakeFiles/glad.dir/src/gles2.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -fcolor-diagnostics
+  INCLUDES = -I/Users/hyc/projects/cpp/DuoDyno/include -I/Users/hyc/projects/cpp/DuoDyno/include/view/common -I/Users/hyc/projects/cpp/DuoDyno/extern/glad/include
+  OBJECT_DIR = extern/glad/CMakeFiles/glad.dir
+  OBJECT_FILE_DIR = extern/glad/CMakeFiles/glad.dir/src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target glad
+
+
+#############################################
+# Link the static library extern/glad/libglad.a
+
+build extern/glad/libglad.a: C_STATIC_LIBRARY_LINKER__glad_Debug extern/glad/CMakeFiles/glad.dir/src/gles2.c.o
+  ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = extern/glad/CMakeFiles/glad.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = extern/glad/libglad.a
+  TARGET_PDB = glad.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build extern/glad/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/glad && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build extern/glad/edit_cache: phony extern/glad/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build extern/glad/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/glad && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S/Users/hyc/projects/cpp/DuoDyno -B/Users/hyc/projects/cpp/DuoDyno/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build extern/glad/rebuild_cache: phony extern/glad/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build extern/glad/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build extern/glad/CMakeFiles/install.util: CUSTOM_COMMAND extern/glad/all
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/glad && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build extern/glad/install: phony extern/glad/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build extern/glad/CMakeFiles/install/local.util: CUSTOM_COMMAND extern/glad/all
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/glad && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build extern/glad/install/local: phony extern/glad/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build extern/glad/CMakeFiles/install/strip.util: CUSTOM_COMMAND extern/glad/all
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/glad && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build extern/glad/install/strip: phony extern/glad/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/hyc/projects/cpp/DuoDyno/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target METAL_CPP
+
+
+#############################################
+# Order-only phony target for METAL_CPP
+
+build cmake_object_order_depends_target_METAL_CPP: phony || extern/metal-cpp/CMakeFiles/METAL_CPP.dir
+
+build extern/metal-cpp/CMakeFiles/METAL_CPP.dir/definition.cpp.o: CXX_COMPILER__METAL_CPP_unscanned_Debug /Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/definition.cpp || cmake_object_order_depends_target_METAL_CPP
+  DEP_FILE = extern/metal-cpp/CMakeFiles/METAL_CPP.dir/definition.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -fcolor-diagnostics
+  INCLUDES = -I/Users/hyc/projects/cpp/DuoDyno/include -I/Users/hyc/projects/cpp/DuoDyno/include/view/common -I/Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/metal-cpp -I/Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/metal-cpp-extensions -I/Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/metal-cpp -I/Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/metal-cpp-extensions
+  OBJECT_DIR = extern/metal-cpp/CMakeFiles/METAL_CPP.dir
+  OBJECT_FILE_DIR = extern/metal-cpp/CMakeFiles/METAL_CPP.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target METAL_CPP
+
+
+#############################################
+# Link the static library extern/metal-cpp/libMETAL_CPP.a
+
+build extern/metal-cpp/libMETAL_CPP.a: CXX_STATIC_LIBRARY_LINKER__METAL_CPP_Debug extern/metal-cpp/CMakeFiles/METAL_CPP.dir/definition.cpp.o
+  ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = extern/metal-cpp/CMakeFiles/METAL_CPP.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = extern/metal-cpp/libMETAL_CPP.a
+  TARGET_PDB = METAL_CPP.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build extern/metal-cpp/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/metal-cpp && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build extern/metal-cpp/edit_cache: phony extern/metal-cpp/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build extern/metal-cpp/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/metal-cpp && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S/Users/hyc/projects/cpp/DuoDyno -B/Users/hyc/projects/cpp/DuoDyno/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build extern/metal-cpp/rebuild_cache: phony extern/metal-cpp/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build extern/metal-cpp/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build extern/metal-cpp/CMakeFiles/install.util: CUSTOM_COMMAND extern/metal-cpp/all
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/metal-cpp && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build extern/metal-cpp/install: phony extern/metal-cpp/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build extern/metal-cpp/CMakeFiles/install/local.util: CUSTOM_COMMAND extern/metal-cpp/all
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/metal-cpp && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build extern/metal-cpp/install/local: phony extern/metal-cpp/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build extern/metal-cpp/CMakeFiles/install/strip.util: CUSTOM_COMMAND extern/metal-cpp/all
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/metal-cpp && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build extern/metal-cpp/install/strip: phony extern/metal-cpp/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/hyc/projects/cpp/DuoDyno/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for edit_cache
+
+build metal-cpp-cmake/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/metal-cpp-cmake && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build metal-cpp-cmake/edit_cache: phony metal-cpp-cmake/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build metal-cpp-cmake/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/metal-cpp-cmake && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S/Users/hyc/projects/cpp/DuoDyno -B/Users/hyc/projects/cpp/DuoDyno/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build metal-cpp-cmake/rebuild_cache: phony metal-cpp-cmake/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build metal-cpp-cmake/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build metal-cpp-cmake/CMakeFiles/install.util: CUSTOM_COMMAND metal-cpp-cmake/all
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/metal-cpp-cmake && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build metal-cpp-cmake/install: phony metal-cpp-cmake/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build metal-cpp-cmake/CMakeFiles/install/local.util: CUSTOM_COMMAND metal-cpp-cmake/all
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/metal-cpp-cmake && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build metal-cpp-cmake/install/local: phony metal-cpp-cmake/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build metal-cpp-cmake/CMakeFiles/install/strip.util: CUSTOM_COMMAND metal-cpp-cmake/all
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/metal-cpp-cmake && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build metal-cpp-cmake/install/strip: phony metal-cpp-cmake/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for edit_cache
+
+build metal-cpp-cmake/metal-cmake/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/metal-cpp-cmake/metal-cmake && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build metal-cpp-cmake/metal-cmake/edit_cache: phony metal-cpp-cmake/metal-cmake/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build metal-cpp-cmake/metal-cmake/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/metal-cpp-cmake/metal-cmake && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S/Users/hyc/projects/cpp/DuoDyno -B/Users/hyc/projects/cpp/DuoDyno/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build metal-cpp-cmake/metal-cmake/rebuild_cache: phony metal-cpp-cmake/metal-cmake/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build metal-cpp-cmake/metal-cmake/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build metal-cpp-cmake/metal-cmake/CMakeFiles/install.util: CUSTOM_COMMAND metal-cpp-cmake/metal-cmake/all
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/metal-cpp-cmake/metal-cmake && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build metal-cpp-cmake/metal-cmake/install: phony metal-cpp-cmake/metal-cmake/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build metal-cpp-cmake/metal-cmake/CMakeFiles/install/local.util: CUSTOM_COMMAND metal-cpp-cmake/metal-cmake/all
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/metal-cpp-cmake/metal-cmake && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build metal-cpp-cmake/metal-cmake/install/local: phony metal-cpp-cmake/metal-cmake/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build metal-cpp-cmake/metal-cmake/CMakeFiles/install/strip.util: CUSTOM_COMMAND metal-cpp-cmake/metal-cmake/all
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/metal-cpp-cmake/metal-cmake && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build metal-cpp-cmake/metal-cmake/install/strip: phony metal-cpp-cmake/metal-cmake/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target 00-window
+
+
+#############################################
+# Order-only phony target for 00-window
+
+build cmake_object_order_depends_target_00-window: phony || cmake_object_order_depends_target_METAL_CPP
+
+build metal-cpp-cmake/src/CMakeFiles/00-window.dir/learn-metal/00-window/00-window.cpp.o: CXX_COMPILER__00-window_unscanned_Debug /Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/src/learn-metal/00-window/00-window.cpp || cmake_object_order_depends_target_00-window
+  DEP_FILE = metal-cpp-cmake/src/CMakeFiles/00-window.dir/learn-metal/00-window/00-window.cpp.o.d
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -fcolor-diagnostics
+  INCLUDES = -I/Users/hyc/projects/cpp/DuoDyno/include -I/Users/hyc/projects/cpp/DuoDyno/include/view/common -I/Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/metal-cpp -I/Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/metal-cpp-extensions -I/Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/metal-cpp -I/Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/metal-cpp-extensions
+  OBJECT_DIR = metal-cpp-cmake/src/CMakeFiles/00-window.dir
+  OBJECT_FILE_DIR = metal-cpp-cmake/src/CMakeFiles/00-window.dir/learn-metal/00-window
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target 00-window
+
+
+#############################################
+# Link the executable metal-cpp-cmake/src/00-window
+
+build metal-cpp-cmake/src/00-window: CXX_EXECUTABLE_LINKER__00-window_Debug metal-cpp-cmake/src/CMakeFiles/00-window.dir/learn-metal/00-window/00-window.cpp.o | extern/metal-cpp/libMETAL_CPP.a || extern/metal-cpp/libMETAL_CPP.a
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1
+  LINK_LIBRARIES = extern/metal-cpp/libMETAL_CPP.a  -framework Metal  -framework MetalKit  -framework AppKit  -framework Foundation  -framework QuartzCore  -framework Metal  -framework MetalKit  -framework AppKit  -framework Foundation  -framework QuartzCore
+  OBJECT_DIR = metal-cpp-cmake/src/CMakeFiles/00-window.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = metal-cpp-cmake/src/00-window
+  TARGET_PDB = 00-window.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target 01-primitive
+
+
+#############################################
+# Order-only phony target for 01-primitive
+
+build cmake_object_order_depends_target_01-primitive: phony || cmake_object_order_depends_target_METAL_CPP
+
+build metal-cpp-cmake/src/CMakeFiles/01-primitive.dir/learn-metal/01-primitive/01-primitive.cpp.o: CXX_COMPILER__01-primitive_unscanned_Debug /Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/src/learn-metal/01-primitive/01-primitive.cpp || cmake_object_order_depends_target_01-primitive
+  DEP_FILE = metal-cpp-cmake/src/CMakeFiles/01-primitive.dir/learn-metal/01-primitive/01-primitive.cpp.o.d
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -fcolor-diagnostics
+  INCLUDES = -I/Users/hyc/projects/cpp/DuoDyno/include -I/Users/hyc/projects/cpp/DuoDyno/include/view/common -I/Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/metal-cpp -I/Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/metal-cpp-extensions -I/Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/metal-cpp -I/Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/metal-cpp-extensions
+  OBJECT_DIR = metal-cpp-cmake/src/CMakeFiles/01-primitive.dir
+  OBJECT_FILE_DIR = metal-cpp-cmake/src/CMakeFiles/01-primitive.dir/learn-metal/01-primitive
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target 01-primitive
+
+
+#############################################
+# Link the executable metal-cpp-cmake/src/01-primitive
+
+build metal-cpp-cmake/src/01-primitive: CXX_EXECUTABLE_LINKER__01-primitive_Debug metal-cpp-cmake/src/CMakeFiles/01-primitive.dir/learn-metal/01-primitive/01-primitive.cpp.o | extern/metal-cpp/libMETAL_CPP.a || extern/metal-cpp/libMETAL_CPP.a
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1
+  LINK_LIBRARIES = extern/metal-cpp/libMETAL_CPP.a  -framework Metal  -framework MetalKit  -framework AppKit  -framework Foundation  -framework QuartzCore  -framework Metal  -framework MetalKit  -framework AppKit  -framework Foundation  -framework QuartzCore
+  OBJECT_DIR = metal-cpp-cmake/src/CMakeFiles/01-primitive.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = metal-cpp-cmake/src/01-primitive
+  TARGET_PDB = 01-primitive.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target 02-argbuffers
+
+
+#############################################
+# Order-only phony target for 02-argbuffers
+
+build cmake_object_order_depends_target_02-argbuffers: phony || cmake_object_order_depends_target_METAL_CPP
+
+build metal-cpp-cmake/src/CMakeFiles/02-argbuffers.dir/learn-metal/02-argbuffers/02-argbuffers.cpp.o: CXX_COMPILER__02-argbuffers_unscanned_Debug /Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/src/learn-metal/02-argbuffers/02-argbuffers.cpp || cmake_object_order_depends_target_02-argbuffers
+  DEP_FILE = metal-cpp-cmake/src/CMakeFiles/02-argbuffers.dir/learn-metal/02-argbuffers/02-argbuffers.cpp.o.d
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -fcolor-diagnostics
+  INCLUDES = -I/Users/hyc/projects/cpp/DuoDyno/include -I/Users/hyc/projects/cpp/DuoDyno/include/view/common -I/Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/metal-cpp -I/Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/metal-cpp-extensions -I/Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/metal-cpp -I/Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/metal-cpp-extensions
+  OBJECT_DIR = metal-cpp-cmake/src/CMakeFiles/02-argbuffers.dir
+  OBJECT_FILE_DIR = metal-cpp-cmake/src/CMakeFiles/02-argbuffers.dir/learn-metal/02-argbuffers
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target 02-argbuffers
+
+
+#############################################
+# Link the executable metal-cpp-cmake/src/02-argbuffers
+
+build metal-cpp-cmake/src/02-argbuffers: CXX_EXECUTABLE_LINKER__02-argbuffers_Debug metal-cpp-cmake/src/CMakeFiles/02-argbuffers.dir/learn-metal/02-argbuffers/02-argbuffers.cpp.o | extern/metal-cpp/libMETAL_CPP.a || extern/metal-cpp/libMETAL_CPP.a
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1
+  LINK_LIBRARIES = extern/metal-cpp/libMETAL_CPP.a  -framework Metal  -framework MetalKit  -framework AppKit  -framework Foundation  -framework QuartzCore  -framework Metal  -framework MetalKit  -framework AppKit  -framework Foundation  -framework QuartzCore
+  OBJECT_DIR = metal-cpp-cmake/src/CMakeFiles/02-argbuffers.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = metal-cpp-cmake/src/02-argbuffers
+  TARGET_PDB = 02-argbuffers.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target 03-animation
+
+
+#############################################
+# Order-only phony target for 03-animation
+
+build cmake_object_order_depends_target_03-animation: phony || cmake_object_order_depends_target_METAL_CPP
+
+build metal-cpp-cmake/src/CMakeFiles/03-animation.dir/learn-metal/03-animation/03-animation.cpp.o: CXX_COMPILER__03-animation_unscanned_Debug /Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/src/learn-metal/03-animation/03-animation.cpp || cmake_object_order_depends_target_03-animation
+  DEP_FILE = metal-cpp-cmake/src/CMakeFiles/03-animation.dir/learn-metal/03-animation/03-animation.cpp.o.d
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -fcolor-diagnostics
+  INCLUDES = -I/Users/hyc/projects/cpp/DuoDyno/include -I/Users/hyc/projects/cpp/DuoDyno/include/view/common -I/Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/metal-cpp -I/Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/metal-cpp-extensions -I/Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/metal-cpp -I/Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/metal-cpp-extensions
+  OBJECT_DIR = metal-cpp-cmake/src/CMakeFiles/03-animation.dir
+  OBJECT_FILE_DIR = metal-cpp-cmake/src/CMakeFiles/03-animation.dir/learn-metal/03-animation
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target 03-animation
+
+
+#############################################
+# Link the executable metal-cpp-cmake/src/03-animation
+
+build metal-cpp-cmake/src/03-animation: CXX_EXECUTABLE_LINKER__03-animation_Debug metal-cpp-cmake/src/CMakeFiles/03-animation.dir/learn-metal/03-animation/03-animation.cpp.o | extern/metal-cpp/libMETAL_CPP.a || extern/metal-cpp/libMETAL_CPP.a
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1
+  LINK_LIBRARIES = extern/metal-cpp/libMETAL_CPP.a  -framework Metal  -framework MetalKit  -framework AppKit  -framework Foundation  -framework QuartzCore  -framework Metal  -framework MetalKit  -framework AppKit  -framework Foundation  -framework QuartzCore
+  OBJECT_DIR = metal-cpp-cmake/src/CMakeFiles/03-animation.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = metal-cpp-cmake/src/03-animation
+  TARGET_PDB = 03-animation.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target 04-instancing
+
+
+#############################################
+# Order-only phony target for 04-instancing
+
+build cmake_object_order_depends_target_04-instancing: phony || cmake_object_order_depends_target_METAL_CPP
+
+build metal-cpp-cmake/src/CMakeFiles/04-instancing.dir/learn-metal/04-instancing/04-instancing.cpp.o: CXX_COMPILER__04-instancing_unscanned_Debug /Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/src/learn-metal/04-instancing/04-instancing.cpp || cmake_object_order_depends_target_04-instancing
+  DEP_FILE = metal-cpp-cmake/src/CMakeFiles/04-instancing.dir/learn-metal/04-instancing/04-instancing.cpp.o.d
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -fcolor-diagnostics
+  INCLUDES = -I/Users/hyc/projects/cpp/DuoDyno/include -I/Users/hyc/projects/cpp/DuoDyno/include/view/common -I/Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/metal-cpp -I/Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/metal-cpp-extensions -I/Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/metal-cpp -I/Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/metal-cpp-extensions
+  OBJECT_DIR = metal-cpp-cmake/src/CMakeFiles/04-instancing.dir
+  OBJECT_FILE_DIR = metal-cpp-cmake/src/CMakeFiles/04-instancing.dir/learn-metal/04-instancing
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target 04-instancing
+
+
+#############################################
+# Link the executable metal-cpp-cmake/src/04-instancing
+
+build metal-cpp-cmake/src/04-instancing: CXX_EXECUTABLE_LINKER__04-instancing_Debug metal-cpp-cmake/src/CMakeFiles/04-instancing.dir/learn-metal/04-instancing/04-instancing.cpp.o | extern/metal-cpp/libMETAL_CPP.a || extern/metal-cpp/libMETAL_CPP.a
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1
+  LINK_LIBRARIES = extern/metal-cpp/libMETAL_CPP.a  -framework Metal  -framework MetalKit  -framework AppKit  -framework Foundation  -framework QuartzCore  -framework Metal  -framework MetalKit  -framework AppKit  -framework Foundation  -framework QuartzCore
+  OBJECT_DIR = metal-cpp-cmake/src/CMakeFiles/04-instancing.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = metal-cpp-cmake/src/04-instancing
+  TARGET_PDB = 04-instancing.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target 05-perspective
+
+
+#############################################
+# Order-only phony target for 05-perspective
+
+build cmake_object_order_depends_target_05-perspective: phony || cmake_object_order_depends_target_METAL_CPP
+
+build metal-cpp-cmake/src/CMakeFiles/05-perspective.dir/learn-metal/05-perspective/05-perspective.cpp.o: CXX_COMPILER__05-perspective_unscanned_Debug /Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/src/learn-metal/05-perspective/05-perspective.cpp || cmake_object_order_depends_target_05-perspective
+  DEP_FILE = metal-cpp-cmake/src/CMakeFiles/05-perspective.dir/learn-metal/05-perspective/05-perspective.cpp.o.d
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -fcolor-diagnostics
+  INCLUDES = -I/Users/hyc/projects/cpp/DuoDyno/include -I/Users/hyc/projects/cpp/DuoDyno/include/view/common -I/Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/metal-cpp -I/Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/metal-cpp-extensions -I/Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/metal-cpp -I/Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/metal-cpp-extensions
+  OBJECT_DIR = metal-cpp-cmake/src/CMakeFiles/05-perspective.dir
+  OBJECT_FILE_DIR = metal-cpp-cmake/src/CMakeFiles/05-perspective.dir/learn-metal/05-perspective
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target 05-perspective
+
+
+#############################################
+# Link the executable metal-cpp-cmake/src/05-perspective
+
+build metal-cpp-cmake/src/05-perspective: CXX_EXECUTABLE_LINKER__05-perspective_Debug metal-cpp-cmake/src/CMakeFiles/05-perspective.dir/learn-metal/05-perspective/05-perspective.cpp.o | extern/metal-cpp/libMETAL_CPP.a || extern/metal-cpp/libMETAL_CPP.a
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1
+  LINK_LIBRARIES = extern/metal-cpp/libMETAL_CPP.a  -framework Metal  -framework MetalKit  -framework AppKit  -framework Foundation  -framework QuartzCore  -framework Metal  -framework MetalKit  -framework AppKit  -framework Foundation  -framework QuartzCore
+  OBJECT_DIR = metal-cpp-cmake/src/CMakeFiles/05-perspective.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = metal-cpp-cmake/src/05-perspective
+  TARGET_PDB = 05-perspective.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target 06-lighting
+
+
+#############################################
+# Order-only phony target for 06-lighting
+
+build cmake_object_order_depends_target_06-lighting: phony || cmake_object_order_depends_target_METAL_CPP
+
+build metal-cpp-cmake/src/CMakeFiles/06-lighting.dir/learn-metal/06-lighting/06-lighting.cpp.o: CXX_COMPILER__06-lighting_unscanned_Debug /Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/src/learn-metal/06-lighting/06-lighting.cpp || cmake_object_order_depends_target_06-lighting
+  DEP_FILE = metal-cpp-cmake/src/CMakeFiles/06-lighting.dir/learn-metal/06-lighting/06-lighting.cpp.o.d
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -fcolor-diagnostics
+  INCLUDES = -I/Users/hyc/projects/cpp/DuoDyno/include -I/Users/hyc/projects/cpp/DuoDyno/include/view/common -I/Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/metal-cpp -I/Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/metal-cpp-extensions -I/Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/metal-cpp -I/Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/metal-cpp-extensions
+  OBJECT_DIR = metal-cpp-cmake/src/CMakeFiles/06-lighting.dir
+  OBJECT_FILE_DIR = metal-cpp-cmake/src/CMakeFiles/06-lighting.dir/learn-metal/06-lighting
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target 06-lighting
+
+
+#############################################
+# Link the executable metal-cpp-cmake/src/06-lighting
+
+build metal-cpp-cmake/src/06-lighting: CXX_EXECUTABLE_LINKER__06-lighting_Debug metal-cpp-cmake/src/CMakeFiles/06-lighting.dir/learn-metal/06-lighting/06-lighting.cpp.o | extern/metal-cpp/libMETAL_CPP.a || extern/metal-cpp/libMETAL_CPP.a
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1
+  LINK_LIBRARIES = extern/metal-cpp/libMETAL_CPP.a  -framework Metal  -framework MetalKit  -framework AppKit  -framework Foundation  -framework QuartzCore  -framework Metal  -framework MetalKit  -framework AppKit  -framework Foundation  -framework QuartzCore
+  OBJECT_DIR = metal-cpp-cmake/src/CMakeFiles/06-lighting.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = metal-cpp-cmake/src/06-lighting
+  TARGET_PDB = 06-lighting.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target 07-texturing
+
+
+#############################################
+# Order-only phony target for 07-texturing
+
+build cmake_object_order_depends_target_07-texturing: phony || cmake_object_order_depends_target_METAL_CPP
+
+build metal-cpp-cmake/src/CMakeFiles/07-texturing.dir/learn-metal/07-texturing/07-texturing.cpp.o: CXX_COMPILER__07-texturing_unscanned_Debug /Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/src/learn-metal/07-texturing/07-texturing.cpp || cmake_object_order_depends_target_07-texturing
+  DEP_FILE = metal-cpp-cmake/src/CMakeFiles/07-texturing.dir/learn-metal/07-texturing/07-texturing.cpp.o.d
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -fcolor-diagnostics
+  INCLUDES = -I/Users/hyc/projects/cpp/DuoDyno/include -I/Users/hyc/projects/cpp/DuoDyno/include/view/common -I/Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/metal-cpp -I/Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/metal-cpp-extensions -I/Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/metal-cpp -I/Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/metal-cpp-extensions
+  OBJECT_DIR = metal-cpp-cmake/src/CMakeFiles/07-texturing.dir
+  OBJECT_FILE_DIR = metal-cpp-cmake/src/CMakeFiles/07-texturing.dir/learn-metal/07-texturing
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target 07-texturing
+
+
+#############################################
+# Link the executable metal-cpp-cmake/src/07-texturing
+
+build metal-cpp-cmake/src/07-texturing: CXX_EXECUTABLE_LINKER__07-texturing_Debug metal-cpp-cmake/src/CMakeFiles/07-texturing.dir/learn-metal/07-texturing/07-texturing.cpp.o | extern/metal-cpp/libMETAL_CPP.a || extern/metal-cpp/libMETAL_CPP.a
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1
+  LINK_LIBRARIES = extern/metal-cpp/libMETAL_CPP.a  -framework Metal  -framework MetalKit  -framework AppKit  -framework Foundation  -framework QuartzCore  -framework Metal  -framework MetalKit  -framework AppKit  -framework Foundation  -framework QuartzCore
+  OBJECT_DIR = metal-cpp-cmake/src/CMakeFiles/07-texturing.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = metal-cpp-cmake/src/07-texturing
+  TARGET_PDB = 07-texturing.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target 08-compute
+
+
+#############################################
+# Order-only phony target for 08-compute
+
+build cmake_object_order_depends_target_08-compute: phony || cmake_object_order_depends_target_METAL_CPP
+
+build metal-cpp-cmake/src/CMakeFiles/08-compute.dir/learn-metal/08-compute/08-compute.cpp.o: CXX_COMPILER__08-compute_unscanned_Debug /Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/src/learn-metal/08-compute/08-compute.cpp || cmake_object_order_depends_target_08-compute
+  DEP_FILE = metal-cpp-cmake/src/CMakeFiles/08-compute.dir/learn-metal/08-compute/08-compute.cpp.o.d
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -fcolor-diagnostics
+  INCLUDES = -I/Users/hyc/projects/cpp/DuoDyno/include -I/Users/hyc/projects/cpp/DuoDyno/include/view/common -I/Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/metal-cpp -I/Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/metal-cpp-extensions -I/Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/metal-cpp -I/Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/metal-cpp-extensions
+  OBJECT_DIR = metal-cpp-cmake/src/CMakeFiles/08-compute.dir
+  OBJECT_FILE_DIR = metal-cpp-cmake/src/CMakeFiles/08-compute.dir/learn-metal/08-compute
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target 08-compute
+
+
+#############################################
+# Link the executable metal-cpp-cmake/src/08-compute
+
+build metal-cpp-cmake/src/08-compute: CXX_EXECUTABLE_LINKER__08-compute_Debug metal-cpp-cmake/src/CMakeFiles/08-compute.dir/learn-metal/08-compute/08-compute.cpp.o | extern/metal-cpp/libMETAL_CPP.a || extern/metal-cpp/libMETAL_CPP.a
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1
+  LINK_LIBRARIES = extern/metal-cpp/libMETAL_CPP.a  -framework Metal  -framework MetalKit  -framework AppKit  -framework Foundation  -framework QuartzCore  -framework Metal  -framework MetalKit  -framework AppKit  -framework Foundation  -framework QuartzCore
+  OBJECT_DIR = metal-cpp-cmake/src/CMakeFiles/08-compute.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = metal-cpp-cmake/src/08-compute
+  TARGET_PDB = 08-compute.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target 09-compute-to-render
+
+
+#############################################
+# Order-only phony target for 09-compute-to-render
+
+build cmake_object_order_depends_target_09-compute-to-render: phony || cmake_object_order_depends_target_METAL_CPP
+
+build metal-cpp-cmake/src/CMakeFiles/09-compute-to-render.dir/learn-metal/09-compute-to-render/09-compute-to-render.cpp.o: CXX_COMPILER__09-compute-to-render_unscanned_Debug /Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/src/learn-metal/09-compute-to-render/09-compute-to-render.cpp || cmake_object_order_depends_target_09-compute-to-render
+  DEP_FILE = metal-cpp-cmake/src/CMakeFiles/09-compute-to-render.dir/learn-metal/09-compute-to-render/09-compute-to-render.cpp.o.d
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -fcolor-diagnostics
+  INCLUDES = -I/Users/hyc/projects/cpp/DuoDyno/include -I/Users/hyc/projects/cpp/DuoDyno/include/view/common -I/Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/metal-cpp -I/Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/metal-cpp-extensions -I/Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/metal-cpp -I/Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/metal-cpp-extensions
+  OBJECT_DIR = metal-cpp-cmake/src/CMakeFiles/09-compute-to-render.dir
+  OBJECT_FILE_DIR = metal-cpp-cmake/src/CMakeFiles/09-compute-to-render.dir/learn-metal/09-compute-to-render
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target 09-compute-to-render
+
+
+#############################################
+# Link the executable metal-cpp-cmake/src/09-compute-to-render
+
+build metal-cpp-cmake/src/09-compute-to-render: CXX_EXECUTABLE_LINKER__09-compute-to-render_Debug metal-cpp-cmake/src/CMakeFiles/09-compute-to-render.dir/learn-metal/09-compute-to-render/09-compute-to-render.cpp.o | extern/metal-cpp/libMETAL_CPP.a || extern/metal-cpp/libMETAL_CPP.a
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1
+  LINK_LIBRARIES = extern/metal-cpp/libMETAL_CPP.a  -framework Metal  -framework MetalKit  -framework AppKit  -framework Foundation  -framework QuartzCore  -framework Metal  -framework MetalKit  -framework AppKit  -framework Foundation  -framework QuartzCore
+  OBJECT_DIR = metal-cpp-cmake/src/CMakeFiles/09-compute-to-render.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = metal-cpp-cmake/src/09-compute-to-render
+  TARGET_PDB = 09-compute-to-render.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target 10-frame-debugging
+
+
+#############################################
+# Order-only phony target for 10-frame-debugging
+
+build cmake_object_order_depends_target_10-frame-debugging: phony || cmake_object_order_depends_target_METAL_CPP
+
+build metal-cpp-cmake/src/CMakeFiles/10-frame-debugging.dir/learn-metal/10-frame-debugging/10-frame-debugging.cpp.o: CXX_COMPILER__10-frame-debugging_unscanned_Debug /Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/src/learn-metal/10-frame-debugging/10-frame-debugging.cpp || cmake_object_order_depends_target_10-frame-debugging
+  DEP_FILE = metal-cpp-cmake/src/CMakeFiles/10-frame-debugging.dir/learn-metal/10-frame-debugging/10-frame-debugging.cpp.o.d
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -fcolor-diagnostics
+  INCLUDES = -I/Users/hyc/projects/cpp/DuoDyno/include -I/Users/hyc/projects/cpp/DuoDyno/include/view/common -I/Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/metal-cpp -I/Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/metal-cpp-extensions -I/Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/metal-cpp -I/Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/metal-cpp-extensions
+  OBJECT_DIR = metal-cpp-cmake/src/CMakeFiles/10-frame-debugging.dir
+  OBJECT_FILE_DIR = metal-cpp-cmake/src/CMakeFiles/10-frame-debugging.dir/learn-metal/10-frame-debugging
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target 10-frame-debugging
+
+
+#############################################
+# Link the executable metal-cpp-cmake/src/10-frame-debugging
+
+build metal-cpp-cmake/src/10-frame-debugging: CXX_EXECUTABLE_LINKER__10-frame-debugging_Debug metal-cpp-cmake/src/CMakeFiles/10-frame-debugging.dir/learn-metal/10-frame-debugging/10-frame-debugging.cpp.o | extern/metal-cpp/libMETAL_CPP.a || extern/metal-cpp/libMETAL_CPP.a
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1
+  LINK_LIBRARIES = extern/metal-cpp/libMETAL_CPP.a  -framework Metal  -framework MetalKit  -framework AppKit  -framework Foundation  -framework QuartzCore  -framework Metal  -framework MetalKit  -framework AppKit  -framework Foundation  -framework QuartzCore
+  OBJECT_DIR = metal-cpp-cmake/src/CMakeFiles/10-frame-debugging.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = metal-cpp-cmake/src/10-frame-debugging
+  TARGET_PDB = 10-frame-debugging.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build metal-cpp-cmake/src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/metal-cpp-cmake/src && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build metal-cpp-cmake/src/edit_cache: phony metal-cpp-cmake/src/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build metal-cpp-cmake/src/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/metal-cpp-cmake/src && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S/Users/hyc/projects/cpp/DuoDyno -B/Users/hyc/projects/cpp/DuoDyno/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build metal-cpp-cmake/src/rebuild_cache: phony metal-cpp-cmake/src/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build metal-cpp-cmake/src/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build metal-cpp-cmake/src/CMakeFiles/install.util: CUSTOM_COMMAND metal-cpp-cmake/src/all
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/metal-cpp-cmake/src && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build metal-cpp-cmake/src/install: phony metal-cpp-cmake/src/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build metal-cpp-cmake/src/CMakeFiles/install/local.util: CUSTOM_COMMAND metal-cpp-cmake/src/all
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/metal-cpp-cmake/src && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build metal-cpp-cmake/src/install/local: phony metal-cpp-cmake/src/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build metal-cpp-cmake/src/CMakeFiles/install/strip.util: CUSTOM_COMMAND metal-cpp-cmake/src/all
+  COMMAND = cd /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/metal-cpp-cmake/src && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build metal-cpp-cmake/src/install/strip: phony metal-cpp-cmake/src/CMakeFiles/install/strip.util
+
 # =============================================================================
 # Target aliases.
+
+build 00-window: phony metal-cpp-cmake/src/00-window
+
+build 01-primitive: phony metal-cpp-cmake/src/01-primitive
+
+build 02-argbuffers: phony metal-cpp-cmake/src/02-argbuffers
+
+build 03-animation: phony metal-cpp-cmake/src/03-animation
+
+build 04-instancing: phony metal-cpp-cmake/src/04-instancing
+
+build 05-perspective: phony metal-cpp-cmake/src/05-perspective
+
+build 06-lighting: phony metal-cpp-cmake/src/06-lighting
+
+build 07-texturing: phony metal-cpp-cmake/src/07-texturing
+
+build 08-compute: phony metal-cpp-cmake/src/08-compute
+
+build 09-compute-to-render: phony metal-cpp-cmake/src/09-compute-to-render
+
+build 10-frame-debugging: phony metal-cpp-cmake/src/10-frame-debugging
+
+build METAL_CPP: phony extern/metal-cpp/libMETAL_CPP.a
+
+build glad: phony extern/glad/libglad.a
+
+build glfw: phony extern/glfw/src/libglfw3.a
+
+build libMETAL_CPP.a: phony extern/metal-cpp/libMETAL_CPP.a
+
+build libglad.a: phony extern/glad/libglad.a
+
+build libglfw3.a: phony extern/glfw/src/libglfw3.a
+
+build uninstall: phony extern/glfw/uninstall
+
+build update_mappings: phony extern/glfw/src/update_mappings
 
 # =============================================================================
 # Folder targets.
@@ -108,7 +1307,56 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug
 
-build all: phony DuoDyno
+build all: phony sample extern/glfw/all extern/glad/all extern/metal-cpp/all metal-cpp-cmake/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/glad
+
+build extern/glad/all: phony extern/glad/libglad.a
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/glfw
+
+build extern/glfw/all: phony extern/glfw/src/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/glfw/src
+
+build extern/glfw/src/all: phony extern/glfw/src/libglfw3.a
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/extern/metal-cpp
+
+build extern/metal-cpp/all: phony extern/metal-cpp/libMETAL_CPP.a
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/metal-cpp-cmake
+
+build metal-cpp-cmake/all: phony metal-cpp-cmake/metal-cmake/all metal-cpp-cmake/src/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/metal-cpp-cmake/metal-cmake
+
+build metal-cpp-cmake/metal-cmake/all: phony
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/hyc/projects/cpp/DuoDyno/cmake-build-debug/metal-cpp-cmake/src
+
+build metal-cpp-cmake/src/all: phony metal-cpp-cmake/src/00-window metal-cpp-cmake/src/01-primitive metal-cpp-cmake/src/02-argbuffers metal-cpp-cmake/src/03-animation metal-cpp-cmake/src/04-instancing metal-cpp-cmake/src/05-perspective metal-cpp-cmake/src/06-lighting metal-cpp-cmake/src/07-texturing metal-cpp-cmake/src/08-compute metal-cpp-cmake/src/09-compute-to-render metal-cpp-cmake/src/10-frame-debugging
 
 # =============================================================================
 # Built-in targets
@@ -117,14 +1365,14 @@ build all: phony DuoDyno
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCCompiler.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCCompilerABI.c /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCXXCompiler.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCompilerIdDetection.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeDetermineCompileFeatures.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeDetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeFindBinUtils.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeParseImplicitIncludeInfo.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeParseImplicitLinkInfo.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeParseLibraryArchitecture.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystem.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeTestCompilerCommon.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/ADSP-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/ARMCC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/ARMClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/AppleClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Borland-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Clang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Cray-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/GHS-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/GNU-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/HP-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/IAR-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Intel-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/LCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/MSVC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/NVHPC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/PGI-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/PathScale-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/SCO-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/TI-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Tasking-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Watcom-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/XL-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/zOS-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Internal/FeatureTesting.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin-Determine-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake /Users/hyc/projects/cpp/DuoDyno/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.0/CMakeCCompiler.cmake CMakeFiles/3.27.0/CMakeCXXCompiler.cmake CMakeFiles/3.27.0/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeDependentOption.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakePackageConfigHelpers.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindThreads.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/GNUInstallDirs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/WriteBasicConfigVersionFile.cmake /Users/hyc/projects/cpp/DuoDyno/CMakeLists.txt /Users/hyc/projects/cpp/DuoDyno/extern/glad/CMakeLists.txt /Users/hyc/projects/cpp/DuoDyno/extern/glfw/CMakeLists.txt /Users/hyc/projects/cpp/DuoDyno/extern/glfw/cmake_uninstall.cmake.in /Users/hyc/projects/cpp/DuoDyno/extern/glfw/src/CMakeLists.txt /Users/hyc/projects/cpp/DuoDyno/extern/glfw/src/glfw3.pc.in /Users/hyc/projects/cpp/DuoDyno/extern/glfw/src/glfw3Config.cmake.in /Users/hyc/projects/cpp/DuoDyno/extern/glfw/src/glfw_config.h.in /Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/CMakeLists.txt /Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/CMakeLists.txt /Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/CMakeLists.txt /Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/src/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.0/CMakeCCompiler.cmake CMakeFiles/3.27.0/CMakeCXXCompiler.cmake CMakeFiles/3.27.0/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCCompiler.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCCompilerABI.c /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCXXCompiler.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCompilerIdDetection.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeDetermineCompileFeatures.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeDetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeFindBinUtils.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeParseImplicitIncludeInfo.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeParseImplicitLinkInfo.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeParseLibraryArchitecture.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystem.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeTestCompilerCommon.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/ADSP-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/ARMCC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/ARMClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/AppleClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Borland-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Clang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Cray-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/GHS-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/GNU-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/HP-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/IAR-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Intel-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/LCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/MSVC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/NVHPC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/PGI-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/PathScale-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/SCO-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/TI-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Tasking-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Watcom-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/XL-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/zOS-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Internal/FeatureTesting.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin-Determine-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake /Users/hyc/projects/cpp/DuoDyno/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.0/CMakeCCompiler.cmake CMakeFiles/3.27.0/CMakeCXXCompiler.cmake CMakeFiles/3.27.0/CMakeSystem.cmake: phony
+build /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeDependentOption.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakePackageConfigHelpers.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/FindThreads.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/GNUInstallDirs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/WriteBasicConfigVersionFile.cmake /Users/hyc/projects/cpp/DuoDyno/CMakeLists.txt /Users/hyc/projects/cpp/DuoDyno/extern/glad/CMakeLists.txt /Users/hyc/projects/cpp/DuoDyno/extern/glfw/CMakeLists.txt /Users/hyc/projects/cpp/DuoDyno/extern/glfw/cmake_uninstall.cmake.in /Users/hyc/projects/cpp/DuoDyno/extern/glfw/src/CMakeLists.txt /Users/hyc/projects/cpp/DuoDyno/extern/glfw/src/glfw3.pc.in /Users/hyc/projects/cpp/DuoDyno/extern/glfw/src/glfw3Config.cmake.in /Users/hyc/projects/cpp/DuoDyno/extern/glfw/src/glfw_config.h.in /Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/CMakeLists.txt /Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/CMakeLists.txt /Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/CMakeLists.txt /Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/src/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.0/CMakeCCompiler.cmake CMakeFiles/3.27.0/CMakeCXXCompiler.cmake CMakeFiles/3.27.0/CMakeSystem.cmake: phony
 
 
 #############################################
