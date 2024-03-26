@@ -15,7 +15,6 @@
  * limitations under the License.
  */
 
-#include <cassert>
 #include "view/window.h"
 
 #define NS_PRIVATE_IMPLEMENTATION
@@ -104,17 +103,27 @@ void MyAppDelegate::applicationDidFinishLaunching( NS::Notification* pNotificati
 	_pMtkView->setDelegate( _pViewDelegate );
 
 	_pWindow->setContentView( _pMtkView );
-	_pWindow->setTitle( NS::String::string( "04 - Instancing", NS::StringEncoding::UTF8StringEncoding ) );
+	_pWindow->setTitle( NS::String::string( "Sample", NS::StringEncoding::UTF8StringEncoding ) );
 
 	_pWindow->makeKeyAndOrderFront( nullptr );
 
-	NS::Application* pApp = reinterpret_cast< NS::Application* >( pNotification->object() );
+	auto* pApp = reinterpret_cast< NS::Application* >( pNotification->object() );
 	pApp->activateIgnoringOtherApps( true );
+
+	{
+		std::lock_guard<std::mutex> lock(mtx);
+		finished = true;
+	}
+	cv.notify_one();
 }
 
 bool MyAppDelegate::applicationShouldTerminateAfterLastWindowClosed( NS::Application* pSender )
 {
 	return true;
+}
+
+void MyAppDelegate::setViewDelegate(MyMTKViewDelegate *viewDelegate) {
+	_pViewDelegate=viewDelegate;
 }
 
 #pragma endregion AppDelegate }
@@ -125,13 +134,8 @@ bool MyAppDelegate::applicationShouldTerminateAfterLastWindowClosed( NS::Applica
 
 MyMTKViewDelegate::MyMTKViewDelegate( MTL::Device* pDevice )
 		: MTK::ViewDelegate()
-		, _pRenderer( new Renderer<Shape>( pDevice ) )
+		, _pRenderer( std::make_unique<Renderer<Square>>( pDevice ) )
 {
-}
-
-MyMTKViewDelegate::~MyMTKViewDelegate()
-{
-	delete _pRenderer;
 }
 
 void MyMTKViewDelegate::drawInMTKView( MTK::View* pView )

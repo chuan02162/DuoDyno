@@ -74,7 +74,7 @@ static GLFWbool isValidElementForJoystick(const _GLFWmapelement* e,
     return GLFW_TRUE;
 }
 
-// Finds a mapping based on joystick GUID and verifies element indices
+// Finds a mapping based on joystick GUID and verifies element _pIndices
 //
 static _GLFWmapping* findValidMapping(const _GLFWjoystick* js)
 {

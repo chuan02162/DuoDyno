@@ -4,49 +4,34 @@
 
 #include "view/common/shape.h"
 
-simd::float3 *Shape::_pVerts = nullptr;
-uint16_t *Shape::_pIndices = nullptr;
-size_t Shape::_pVertsSize = 0;
-size_t Shape::_pIndicesSize = 0;
-
-
-void Shape::writeVertsData(void *dst) {
-	memcpy(dst, _pVerts, getVertsSize());
-}
-
-void Shape::writeIndicesData(void *dst) {
-	memcpy(dst, _pIndices, getIndicesSize());
-}
-
-void Shape::setShape(simd::float3 *verts, const uint16_t *indices, size_t vertsSize, size_t indicesSize) {
-	_pVerts = new simd::float3[vertsSize];
-	_pIndices = new uint16_t[indicesSize];
-	for (int i = 0; i < vertsSize; ++i)
-		_pVerts[i] = verts[i];
-	for (int i = 0; i < indicesSize; ++i)
-		_pIndices[i] = indices[i];
-	_pVertsSize = vertsSize;
-	_pIndicesSize = indicesSize;
-}
+#include <memory>
 
 Square::Square() : Shape() {
+}
+
+std::shared_ptr<ShapeData> Square::getData() {
 	static float s = 0.5f;
-	static simd::float3 verts[] = {
-			{-s, -s, +s},
-			{+s, -s, +s},
-			{+s, +s, +s},
-			{-s, +s, +s}
-	};
+	static size_t vertsSize = 4;
+	static size_t indicesSize = 6;
+	static simd::float3 verts[] = {{-s, -s, +s},
+								   {+s, -s, +s},
+								   {+s, +s, +s},
+								   {-s, +s, +s}};
 	static uint16_t indices[] = {
 			0, 1, 2,
 			2, 3, 0,
 	};
-	setShape(verts, indices, 4, 6);
+	static std::shared_ptr<ShapeData> ret(new ShapeData(verts, indices, vertsSize, indicesSize));
+	return ret;
 }
 
-size_t Shape::getVertsSize() {
-	return sizeof(simd::float3) * _pVertsSize;
-}
-size_t Shape::getIndicesSize() {
-	return sizeof(uint16_t) * _pIndicesSize;
+ShapeData::ShapeData(simd::float3 verts[], uint16_t indices[], size_t vertsSize, size_t indicesSize) {
+	_pVerts= std::make_shared<std::vector<simd::float3>>();
+	_pIndices=std::make_shared<std::vector<uint16_t>>();
+	for(int i=0;i<vertsSize;++i){
+		_pVerts->push_back(verts[i]);
+	}
+	for(int i=0;i<indicesSize;++i){
+		_pIndices->push_back(indices[i]);
+	}
 }

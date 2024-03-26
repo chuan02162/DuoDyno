@@ -6,32 +6,26 @@
 #define DUODYNO_SHAPE_H
 
 #include<simd/simd.h>
+#include<iostream>
 #include<cstring>
+#include<vector>
+
+struct ShapeData{
+	float s = 0.5f;
+	std::shared_ptr<std::vector<simd::float3>> _pVerts;
+	std::shared_ptr<std::vector<uint16_t>> _pIndices;
+	ShapeData(simd::float3 verts[], uint16_t indices[], size_t vertsSize, size_t indicesSize);
+};
 
 class Shape {
 public:
-
-	static void writeVertsData(void *dst);
-
-	static void writeIndicesData(void *dst);
-
-	static void setShape(simd::float3 *verts, const uint16_t *indices, size_t vertsSize, size_t indicesSize);
-
-	static size_t getVertsSize();
-
-	static size_t getIndicesSize();
-
-	simd::float4x4 *Transform;
-
-	static simd::float3 *_pVerts;
-	static uint16_t *_pIndices;
-	static size_t _pVertsSize;
-	static size_t _pIndicesSize;
+	std::shared_ptr<simd::float4x4> transform;
 };
 
 class Square : public Shape {
 public:
 	Square();
+	static std::shared_ptr<ShapeData> getData();
 };
 
 #endif //DUODYNO_SHAPE_H

@@ -5,12 +5,12 @@
 #ifndef DUODYNO_SHAPE_FACTORY_H
 #define DUODYNO_SHAPE_FACTORY_H
 
-#endif //DUODYNO_SHAPE_FACTORY_H
-
 #include "shape.h"
 
 class ShapeFactory {
 public:
 	static ShapeFactory& getInstance();
-	Shape* createShape(const std::string &name);
+	std::shared_ptr<Shape> createShape(const std::string &name);
 };
+
+#endif //DUODYNO_SHAPE_FACTORY_H
