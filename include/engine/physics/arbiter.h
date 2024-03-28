@@ -7,15 +7,17 @@
 
 #include <simd/simd.h>
 #include <memory>
+#include <vector>
+#include <utility>
 
 #include "engine/common/math_util.h"
 
+using namespace std;
+
 struct Body;
 
-union FeaturePair
-{
-	struct Edges
-	{
+union FeaturePair {
+	struct Edges {
 		char inEdge1;
 		char outEdge1;
 		char inEdge2;
@@ -24,64 +26,57 @@ union FeaturePair
 	int value;
 };
 
-struct Contact
-{
+struct Contact {
 	Contact() : Pn(0.0f), Pt(0.0f), Pnb(0.0f) {}
 
 	Vec2 position;
 	Vec2 normal;
 	Vec2 r1, r2;
 	float separation;
-	float Pn;	// accumulated normal impulse
-	float Pt;	// accumulated tangent impulse
-	float Pnb;	// accumulated normal impulse for position bias
+	float Pn;    // accumulated normal impulse
+	float Pt;    // accumulated tangent impulse
+	float Pnb;    // accumulated normal impulse for position bias
 	float massNormal, massTangent;
 	float bias;
 	FeaturePair feature;
 };
 
-struct ArbiterKey
-{
-	ArbiterKey(std::shared_ptr<Body> b1, std::shared_ptr<Body> b2)
-	{
-		if (b1 < b2)
-		{
-			body1 = b1; body2 = b2;
-		}
-		else
-		{
-			body1 = b2; body2 = b1;
+struct ArbiterKey {
+	ArbiterKey(shared_ptr<Body> b1, shared_ptr<Body> b2) {
+		if (b1 < b2) {
+			body1 = b1;
+			body2 = b2;
+		} else {
+			body1 = b2;
+			body2 = b1;
 		}
 	}
 
-	std::shared_ptr<Body> body1;
-	std::shared_ptr<Body> body2;
+	shared_ptr<Body> body1;
+	shared_ptr<Body> body2;
 };
 
-struct Arbiter
-{
-	enum {MAX_POINTS = 2};
+struct Arbiter {
+	Arbiter(shared_ptr<Body> &b1, shared_ptr<Body> &b2);
 
-	Arbiter(std::shared_ptr<Body> &b1, std::shared_ptr<Body> &b2);
-
-	void Update(Contact* contacts, int numContacts);
+	void Update(vector<shared_ptr<Contact>> &newContacts);
 
 	void PreStep(float inv_dt);
+
 	void ApplyImpulse();
 
-	Contact contacts[MAX_POINTS];
-	int numContacts;
+	vector<shared_ptr<Contact>> contacts;
 
-	std::shared_ptr<Body> body1;
-	std::shared_ptr<Body> body2;
+	shared_ptr<Body> body1;
+	shared_ptr<Body> body2;
 
-	// Combined friction
 	float friction;
+
+	bool operator<(const Arbiter &x) const;
 };
 
-// This is used by std::set
-inline bool operator < (const ArbiterKey& a1, const ArbiterKey& a2)
-{
+// This is used by set
+inline bool operator<(const ArbiterKey &a1, const ArbiterKey &a2) {
 	if (a1.body1 < a2.body1)
 		return true;
 
@@ -91,6 +86,6 @@ inline bool operator < (const ArbiterKey& a1, const ArbiterKey& a2)
 	return false;
 }
 
-int Collide(Contact* contacts, const std::shared_ptr<Body>& body1, const std::shared_ptr<Body>& body2);
+int Collide(Contact *contacts, const shared_ptr<Body> &body1, const shared_ptr<Body> &body2);
 
 #endif //DUODYNO_ARBITER_H

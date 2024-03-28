@@ -133,6 +133,13 @@ build CMakeFiles/sample.dir/src/engine/physics/collider.cpp.o: CXX_COMPILER__sam
   OBJECT_DIR = CMakeFiles/sample.dir
   OBJECT_FILE_DIR = CMakeFiles/sample.dir/src/engine/physics
 
+build CMakeFiles/sample.dir/src/controller/adapter.cpp.o: CXX_COMPILER__sample_unscanned_Debug /Users/hyc/projects/cpp/DuoDyno/src/controller/adapter.cpp || cmake_object_order_depends_target_sample
+  DEP_FILE = CMakeFiles/sample.dir/src/controller/adapter.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -mmacosx-version-min=14.1 -fcolor-diagnostics
+  INCLUDES = -I/Users/hyc/projects/cpp/DuoDyno/include -I/Users/hyc/projects/cpp/DuoDyno/include/view/common -I/Users/hyc/projects/cpp/DuoDyno/extern/glfw/include -I/Users/hyc/projects/cpp/DuoDyno/extern/glad/include -I/Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/metal-cpp -I/Users/hyc/projects/cpp/DuoDyno/extern/metal-cpp/metal-cpp-extensions -I/Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/metal-cpp -I/Users/hyc/projects/cpp/DuoDyno/metal-cpp-cmake/metal-cmake/metal-cpp-extensions
+  OBJECT_DIR = CMakeFiles/sample.dir
+  OBJECT_FILE_DIR = CMakeFiles/sample.dir/src/controller
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target sample
@@ -141,7 +148,7 @@ build CMakeFiles/sample.dir/src/engine/physics/collider.cpp.o: CXX_COMPILER__sam
 #############################################
 # Link the executable sample
 
-build sample: CXX_EXECUTABLE_LINKER__sample_Debug CMakeFiles/sample.dir/main.cpp.o CMakeFiles/sample.dir/src/view/common/shape.cpp.o CMakeFiles/sample.dir/src/view/common/shape_factory.cpp.o CMakeFiles/sample.dir/src/view/window.cpp.o CMakeFiles/sample.dir/src/view/task_queue.cpp.o CMakeFiles/sample.dir/src/view/common/controller.cpp.o CMakeFiles/sample.dir/src/engine/physics/world.cpp.o CMakeFiles/sample.dir/src/engine/physics/body.cpp.o CMakeFiles/sample.dir/src/engine/common/engine_settings.cpp.o CMakeFiles/sample.dir/src/engine/physics/arbiter.cpp.o CMakeFiles/sample.dir/src/engine/physics/collide.cpp.o CMakeFiles/sample.dir/src/engine/physics/collider.cpp.o | extern/glfw/src/libglfw3.a extern/glad/libglad.a extern/metal-cpp/libMETAL_CPP.a || extern/glad/libglad.a extern/glfw/src/libglfw3.a extern/metal-cpp/libMETAL_CPP.a
+build sample: CXX_EXECUTABLE_LINKER__sample_Debug CMakeFiles/sample.dir/main.cpp.o CMakeFiles/sample.dir/src/view/common/shape.cpp.o CMakeFiles/sample.dir/src/view/common/shape_factory.cpp.o CMakeFiles/sample.dir/src/view/window.cpp.o CMakeFiles/sample.dir/src/view/task_queue.cpp.o CMakeFiles/sample.dir/src/view/common/controller.cpp.o CMakeFiles/sample.dir/src/engine/physics/world.cpp.o CMakeFiles/sample.dir/src/engine/physics/body.cpp.o CMakeFiles/sample.dir/src/engine/common/engine_settings.cpp.o CMakeFiles/sample.dir/src/engine/physics/arbiter.cpp.o CMakeFiles/sample.dir/src/engine/physics/collide.cpp.o CMakeFiles/sample.dir/src/engine/physics/collider.cpp.o CMakeFiles/sample.dir/src/controller/adapter.cpp.o | extern/glfw/src/libglfw3.a extern/glad/libglad.a extern/metal-cpp/libMETAL_CPP.a || extern/glad/libglad.a extern/glfw/src/libglfw3.a extern/metal-cpp/libMETAL_CPP.a
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -mmacosx-version-min=14.1
   LINK_LIBRARIES = extern/glfw/src/libglfw3.a  extern/glad/libglad.a  extern/metal-cpp/libMETAL_CPP.a  -framework Cocoa  -framework IOKit  -framework CoreFoundation  -framework Metal  -framework MetalKit  -framework AppKit  -framework Foundation  -framework QuartzCore  -framework Metal  -framework MetalKit  -framework AppKit  -framework Foundation  -framework QuartzCore
   OBJECT_DIR = CMakeFiles/sample.dir

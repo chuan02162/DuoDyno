@@ -16,16 +16,17 @@
 
 class World {
 public:
-	World();
+	World(Vec2 scale);
 	static std::shared_ptr<World> getInstance();
 	void addBody(std::shared_ptr<Body> &body);
 	void step(float dt);
-	void broadPhase();
+//	void broadPhase();
 	std::vector<std::shared_ptr<Body>> bodies;
 	static bool accumulateImpulses;
 	static bool warmStarting;
 	static bool positionCorrection;
 	int iterations=10;
+	Vec2 scale;
 private:
 	Vec2 gravity;
 	std::map<ArbiterKey, Arbiter> arbiters;

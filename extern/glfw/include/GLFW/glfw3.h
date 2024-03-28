@@ -528,36 +528,36 @@ extern "C" {
  *  @ingroup input
  *  @{ */
 
-/*! @brief If this bit is set one or more Shift keys were held down.
+/*! @brief If this bit is setPosition one or more Shift keys were held down.
  *
- *  If this bit is set one or more Shift keys were held down.
+ *  If this bit is setPosition one or more Shift keys were held down.
  */
 #define GLFW_MOD_SHIFT           0x0001
-/*! @brief If this bit is set one or more Control keys were held down.
+/*! @brief If this bit is setPosition one or more Control keys were held down.
  *
- *  If this bit is set one or more Control keys were held down.
+ *  If this bit is setPosition one or more Control keys were held down.
  */
 #define GLFW_MOD_CONTROL         0x0002
-/*! @brief If this bit is set one or more Alt keys were held down.
+/*! @brief If this bit is setPosition one or more Alt keys were held down.
  *
- *  If this bit is set one or more Alt keys were held down.
+ *  If this bit is setPosition one or more Alt keys were held down.
  */
 #define GLFW_MOD_ALT             0x0004
-/*! @brief If this bit is set one or more Super keys were held down.
+/*! @brief If this bit is setPosition one or more Super keys were held down.
  *
- *  If this bit is set one or more Super keys were held down.
+ *  If this bit is setPosition one or more Super keys were held down.
  */
 #define GLFW_MOD_SUPER           0x0008
-/*! @brief If this bit is set the Caps Lock key is enabled.
+/*! @brief If this bit is setPosition the Caps Lock key is enabled.
  *
- *  If this bit is set the Caps Lock key is enabled and the @ref
- *  GLFW_LOCK_KEY_MODS input mode is set.
+ *  If this bit is setPosition the Caps Lock key is enabled and the @ref
+ *  GLFW_LOCK_KEY_MODS input mode is setPosition.
  */
 #define GLFW_MOD_CAPS_LOCK       0x0010
-/*! @brief If this bit is set the Num Lock key is enabled.
+/*! @brief If this bit is setPosition the Num Lock key is enabled.
  *
- *  If this bit is set the Num Lock key is enabled and the @ref
- *  GLFW_LOCK_KEY_MODS input mode is set.
+ *  If this bit is setPosition the Num Lock key is enabled and the @ref
+ *  GLFW_LOCK_KEY_MODS input mode is setPosition.
  */
 #define GLFW_MOD_NUM_LOCK        0x0020
 
@@ -1791,7 +1791,7 @@ typedef struct GLFWgamepadstate
  *  bundle, if present.  This can be disabled with the @ref
  *  GLFW_COCOA_CHDIR_RESOURCES init hint.
  *
- *  @remark @x11 This function will set the `LC_CTYPE` category of the
+ *  @remark @x11 This function will setPosition the `LC_CTYPE` category of the
  *  application locale according to the current environment if that category is
  *  still "C".  This is because the "C" locale breaks Unicode text input.
  *
@@ -1844,16 +1844,16 @@ GLFWAPI void glfwTerminate(void);
  *
  *  This function sets hints for the next initialization of GLFW.
  *
- *  The values you set hints to are never reset by GLFW, but they only take
+ *  The values you setPosition hints to are never reset by GLFW, but they only take
  *  effect during initialization.  Once GLFW has been initialized, any values
- *  you set will be ignored until the library is terminated and initialized
+ *  you setPosition will be ignored until the library is terminated and initialized
  *  again.
  *
- *  Some hints are platform specific.  These may be set on any platform but they
+ *  Some hints are platform specific.  These may be setPosition on any platform but they
  *  will only affect their specific platform.  Other platforms will ignore them.
  *  Setting these hints requires no platform specific headers or functions.
  *
- *  @param[in] hint The [init hint](@ref init_hints) to set.
+ *  @param[in] hint The [init hint](@ref init_hints) to setPosition.
  *  @param[in] value The new value of the init hint.
  *
  *  @errors Possible errors include @ref GLFW_INVALID_ENUM and @ref
@@ -1936,7 +1936,7 @@ GLFWAPI const char* glfwGetVersionString(void);
  *  error that occurred on the calling thread, and optionally a UTF-8 encoded
  *  human-readable description of it.  If no error has occurred since the last
  *  call, it returns @ref GLFW_NO_ERROR (zero) and the description pointer is
- *  set to `NULL`.
+ *  setPosition to `NULL`.
  *
  *  @param[in] description Where to store the error description pointer, or `NULL`.
  *  @return The last error code for the calling thread, or @ref GLFW_NO_ERROR
@@ -1966,7 +1966,7 @@ GLFWAPI int glfwGetError(const char** description);
  *  This function sets the error callback, which is called with an error code
  *  and a human-readable description each time a GLFW error occurs.
  *
- *  The error code is set before the callback is called.  Calling @ref
+ *  The error code is setPosition before the callback is called.  Calling @ref
  *  glfwGetError from the error callback will return the same value as the error
  *  code argument.
  *
@@ -1978,12 +1978,12 @@ GLFWAPI int glfwGetError(const char** description);
  *  error, it is not guaranteed to be valid after the callback has returned.  If
  *  you wish to use it after the callback returns, you need to make a copy.
  *
- *  Once set, the error callback remains set even after the library has been
+ *  Once set, the error callback remains setPosition even after the library has been
  *  terminated.
  *
- *  @param[in] callback The new callback, or `NULL` to remove the currently set
+ *  @param[in] callback The new callback, or `NULL` to remove the currently setPosition
  *  callback.
- *  @return The previously set callback, or `NULL` if no callback was set.
+ *  @return The previously set callback, or `NULL` if no callback was setPosition.
  *
  *  @callback_signature
  *  @code
@@ -2014,7 +2014,7 @@ GLFWAPI GLFWerrorfun glfwSetErrorCallback(GLFWerrorfun callback);
  *  monitors were found, this function returns `NULL`.
  *
  *  @param[out] count Where to store the number of monitors in the returned
- *  array.  This is set to zero if an error occurred.
+ *  array.  This is setPosition to zero if an error occurred.
  *  @return An array of monitor handles, or `NULL` if no monitors were found or
  *  if an [error](@ref error_handling) occurred.
  *
@@ -2066,7 +2066,7 @@ GLFWAPI GLFWmonitor* glfwGetPrimaryMonitor(void);
  *  corner of the specified monitor.
  *
  *  Any or all of the position arguments may be `NULL`.  If an error occurs, all
- *  non-`NULL` position arguments will be set to zero.
+ *  non-`NULL` position arguments will be setPosition to zero.
  *
  *  @param[in] monitor The monitor to query.
  *  @param[out] xpos Where to store the monitor x-coordinate, or `NULL`.
@@ -2095,7 +2095,7 @@ GLFWAPI void glfwGetMonitorPos(GLFWmonitor* monitor, int* xpos, int* ypos);
  *  coordinates.
  *
  *  Any or all of the position and size arguments may be `NULL`.  If an error
- *  occurs, all non-`NULL` position and size arguments will be set to zero.
+ *  occurs, all non-`NULL` position and size arguments will be setPosition to zero.
  *
  *  @param[in] monitor The monitor to query.
  *  @param[out] xpos Where to store the monitor x-coordinate, or `NULL`.
@@ -2127,7 +2127,7 @@ GLFWAPI void glfwGetMonitorWorkarea(GLFWmonitor* monitor, int* xpos, int* ypos, 
  *  data is incorrect or because the driver does not report it accurately.
  *
  *  Any or all of the size arguments may be `NULL`.  If an error occurs, all
- *  non-`NULL` size arguments will be set to zero.
+ *  non-`NULL` size arguments will be setPosition to zero.
  *
  *  @param[in] monitor The monitor to query.
  *  @param[out] widthMM Where to store the width, in millimetres, of the
@@ -2217,7 +2217,7 @@ GLFWAPI const char* glfwGetMonitorName(GLFWmonitor* monitor);
  *  This function may be called from the monitor callback, even for a monitor
  *  that is being disconnected.
  *
- *  @param[in] monitor The monitor whose pointer to set.
+ *  @param[in] monitor The monitor whose pointer to setPosition.
  *  @param[in] pointer The new value.
  *
  *  @errors Possible errors include @ref GLFW_NOT_INITIALIZED.
@@ -2261,12 +2261,12 @@ GLFWAPI void* glfwGetMonitorUserPointer(GLFWmonitor* monitor);
 /*! @brief Sets the monitor configuration callback.
  *
  *  This function sets the monitor configuration callback, or removes the
- *  currently set callback.  This is called when a monitor is connected to or
+ *  currently setPosition callback.  This is called when a monitor is connected to or
  *  disconnected from the system.
  *
- *  @param[in] callback The new callback, or `NULL` to remove the currently set
+ *  @param[in] callback The new callback, or `NULL` to remove the currently setPosition
  *  callback.
- *  @return The previously set callback, or `NULL` if no callback was set or the
+ *  @return The previously set callback, or `NULL` if no callback was setPosition or the
  *  library had not been [initialized](@ref intro_init).
  *
  *  @callback_signature
@@ -2298,7 +2298,7 @@ GLFWAPI GLFWmonitorfun glfwSetMonitorCallback(GLFWmonitorfun callback);
  *
  *  @param[in] monitor The monitor to query.
  *  @param[out] count Where to store the number of video modes in the returned
- *  array.  This is set to zero if an error occurred.
+ *  array.  This is setPosition to zero if an error occurred.
  *  @return An array of video modes, or `NULL` if an
  *  [error](@ref error_handling) occurred.
  *
@@ -2364,7 +2364,7 @@ GLFWAPI const GLFWvidmode* glfwGetVideoMode(GLFWmonitor* monitor);
  *  For gamma correct rendering with OpenGL or OpenGL ES, see the @ref
  *  GLFW_SRGB_CAPABLE hint.
  *
- *  @param[in] monitor The monitor whose gamma ramp to set.
+ *  @param[in] monitor The monitor whose gamma ramp to setPosition.
  *  @param[in] gamma The desired exponent.
  *
  *  @errors Possible errors include @ref GLFW_NOT_INITIALIZED, @ref
@@ -2427,7 +2427,7 @@ GLFWAPI const GLFWgammaramp* glfwGetGammaRamp(GLFWmonitor* monitor);
  *  For gamma correct rendering with OpenGL or OpenGL ES, see the @ref
  *  GLFW_SRGB_CAPABLE hint.
  *
- *  @param[in] monitor The monitor whose gamma ramp to set.
+ *  @param[in] monitor The monitor whose gamma ramp to setPosition.
  *  @param[in] ramp The gamma ramp to use.
  *
  *  @errors Possible errors include @ref GLFW_NOT_INITIALIZED and @ref
@@ -2476,21 +2476,21 @@ GLFWAPI void glfwDefaultWindowHints(void);
 /*! @brief Sets the specified window hint to the desired value.
  *
  *  This function sets hints for the next call to @ref glfwCreateWindow.  The
- *  hints, once set, retain their values until changed by a call to this
+ *  hints, once setPosition, retain their values until changed by a call to this
  *  function or @ref glfwDefaultWindowHints, or until the library is terminated.
  *
- *  Only integer value hints can be set with this function.  String value hints
- *  are set with @ref glfwWindowHintString.
+ *  Only integer value hints can be setPosition with this function.  String value hints
+ *  are setPosition with @ref glfwWindowHintString.
  *
  *  This function does not check whether the specified hint values are valid.
- *  If you set hints to invalid values this will instead be reported by the next
+ *  If you setPosition hints to invalid values this will instead be reported by the next
  *  call to @ref glfwCreateWindow.
  *
- *  Some hints are platform specific.  These may be set on any platform but they
+ *  Some hints are platform specific.  These may be setPosition on any platform but they
  *  will only affect their specific platform.  Other platforms will ignore them.
  *  Setting these hints requires no platform specific headers or functions.
  *
- *  @param[in] hint The [window hint](@ref window_hints) to set.
+ *  @param[in] hint The [window hint](@ref window_hints) to setPosition.
  *  @param[in] value The new value of the window hint.
  *
  *  @errors Possible errors include @ref GLFW_NOT_INITIALIZED and @ref
@@ -2511,21 +2511,21 @@ GLFWAPI void glfwWindowHint(int hint, int value);
 /*! @brief Sets the specified window hint to the desired value.
  *
  *  This function sets hints for the next call to @ref glfwCreateWindow.  The
- *  hints, once set, retain their values until changed by a call to this
+ *  hints, once setPosition, retain their values until changed by a call to this
  *  function or @ref glfwDefaultWindowHints, or until the library is terminated.
  *
- *  Only string type hints can be set with this function.  Integer value hints
- *  are set with @ref glfwWindowHint.
+ *  Only string type hints can be setPosition with this function.  Integer value hints
+ *  are setPosition with @ref glfwWindowHint.
  *
  *  This function does not check whether the specified hint values are valid.
- *  If you set hints to invalid values this will instead be reported by the next
+ *  If you setPosition hints to invalid values this will instead be reported by the next
  *  call to @ref glfwCreateWindow.
  *
- *  Some hints are platform specific.  These may be set on any platform but they
+ *  Some hints are platform specific.  These may be setPosition on any platform but they
  *  will only affect their specific platform.  Other platforms will ignore them.
  *  Setting these hints requires no platform specific headers or functions.
  *
- *  @param[in] hint The [window hint](@ref window_hints) to set.
+ *  @param[in] hint The [window hint](@ref window_hints) to setPosition.
  *  @param[in] value The new value of the window hint.
  *
  *  @errors Possible errors include @ref GLFW_NOT_INITIALIZED and @ref
@@ -2573,7 +2573,7 @@ GLFWAPI void glfwWindowHintString(int hint, const char* value);
  *  For full screen windows, the specified size becomes the resolution of the
  *  window's _desired video mode_.  As long as a full screen window is not
  *  iconified, the supported video mode most closely matching the desired video
- *  mode is set for the specified monitor.  For more information about full
+ *  mode is setPosition for the specified monitor.  For more information about full
  *  screen windows, including the creation of so called _windowed full screen_
  *  or _borderless full screen_ windows, see @ref window_windowed_full_screen.
  *
@@ -2584,7 +2584,7 @@ GLFWAPI void glfwWindowHintString(int hint, const char* value);
  *  By default, newly created windows use the placement recommended by the
  *  window system.  To create the window at a specific position, make it
  *  initially invisible using the [GLFW_VISIBLE](@ref GLFW_VISIBLE_hint) window
- *  hint, set its [position](@ref window_pos) and then [show](@ref window_hide)
+ *  hint, setPosition its [position](@ref window_pos) and then [show](@ref window_hide)
  *  it.
  *
  *  As long as at least one full screen window is not iconified, the screensaver
@@ -2594,7 +2594,7 @@ GLFWAPI void glfwWindowHintString(int hint, const char* value);
  *  dimensions may be overridden by the window system on creation.  Check the
  *  actual [size](@ref window_size) after creation.
  *
- *  The [swap interval](@ref buffer_swap) is not set during window creation and
+ *  The [swap interval](@ref buffer_swap) is not setPosition during window creation and
  *  the initial value may vary depending on driver settings and defaults.
  *
  *  @param[in] width The desired width, in screen coordinates, of the window.
@@ -2618,8 +2618,8 @@ GLFWAPI void glfwWindowHintString(int hint, const char* value);
  *  OpenGL implementation is the only one available.
  *
  *  @remark @win32 If the executable has an icon resource named `GLFW_ICON,` it
- *  will be set as the initial icon for the window.  If no such icon is present,
- *  the `IDI_APPLICATION` icon will be used instead.  To set a different icon,
+ *  will be setPosition as the initial icon for the window.  If no such icon is present,
+ *  the `IDI_APPLICATION` icon will be used instead.  To setPosition a different icon,
  *  see @ref glfwSetWindowIcon.
  *
  *  @remark @win32 The context to share resources with must not be current on
@@ -2627,7 +2627,7 @@ GLFWAPI void glfwWindowHintString(int hint, const char* value);
  *
  *  @remark @macos The OS only supports forward-compatible core profile contexts
  *  for OpenGL versions 3.2 and later.  Before creating an OpenGL context of
- *  version 3.2 or later you must set the
+ *  version 3.2 or later you must setPosition the
  *  [GLFW_OPENGL_FORWARD_COMPAT](@ref GLFW_OPENGL_FORWARD_COMPAT_hint) and
  *  [GLFW_OPENGL_PROFILE](@ref GLFW_OPENGL_PROFILE_hint) hints accordingly.
  *  OpenGL 3.0 and 3.1 contexts are not supported at all on macOS.
@@ -2668,7 +2668,7 @@ GLFWAPI void glfwWindowHintString(int hint, const char* value);
  *  creation.
  *
  *  @remark @x11 The class part of the `WM_CLASS` window property will by
- *  default be set to the window title passed to this function.  The instance
+ *  default be setPosition to the window title passed to this function.  The instance
  *  part will use the contents of the `RESOURCE_NAME` environment variable, if
  *  present and not empty, or fall back to the window title.  Set the
  *  [GLFW_X11_CLASS_NAME](@ref GLFW_X11_CLASS_NAME_hint) and
@@ -2811,7 +2811,7 @@ GLFWAPI void glfwSetWindowTitle(GLFWwindow* window, const char* title);
  *  The selected images will be rescaled as needed.  Good sizes include 16x16,
  *  32x32 and 48x48.
  *
- *  @param[in] window The window whose icon to set.
+ *  @param[in] window The window whose icon to setPosition.
  *  @param[in] count The number of images in the specified array, or zero to
  *  revert to the default window icon.
  *  @param[in] images The images to create the icon from.  This is ignored if
@@ -2849,7 +2849,7 @@ GLFWAPI void glfwSetWindowIcon(GLFWwindow* window, int count, const GLFWimage* i
  *  upper-left corner of the content area of the specified window.
  *
  *  Any or all of the position arguments may be `NULL`.  If an error occurs, all
- *  non-`NULL` position arguments will be set to zero.
+ *  non-`NULL` position arguments will be setPosition to zero.
  *
  *  @param[in] window The window to query.
  *  @param[out] xpos Where to store the x-coordinate of the upper-left corner of
@@ -2894,7 +2894,7 @@ GLFWAPI void glfwGetWindowPos(GLFWwindow* window, int* xpos, int* ypos);
  *  @errors Possible errors include @ref GLFW_NOT_INITIALIZED and @ref
  *  GLFW_PLATFORM_ERROR.
  *
- *  @remark @wayland There is no way for an application to set the global
+ *  @remark @wayland There is no way for an application to setPosition the global
  *  position of its windows, this function will always emit @ref
  *  GLFW_PLATFORM_ERROR.
  *
@@ -2917,7 +2917,7 @@ GLFWAPI void glfwSetWindowPos(GLFWwindow* window, int xpos, int ypos);
  *  framebuffer of the window in pixels, see @ref glfwGetFramebufferSize.
  *
  *  Any or all of the size arguments may be `NULL`.  If an error occurs, all
- *  non-`NULL` size arguments will be set to zero.
+ *  non-`NULL` size arguments will be setPosition to zero.
  *
  *  @param[in] window The window whose size to retrieve.
  *  @param[out] width Where to store the width, in screen coordinates, of the
@@ -2953,7 +2953,7 @@ GLFWAPI void glfwGetWindowSize(GLFWwindow* window, int* width, int* height);
  *  The maximum dimensions must be greater than or equal to the minimum
  *  dimensions and all must be greater than or equal to zero.
  *
- *  @param[in] window The window to set limits for.
+ *  @param[in] window The window to setPosition limits for.
  *  @param[in] minwidth The minimum width, in screen coordinates, of the content
  *  area, or `GLFW_DONT_CARE`.
  *  @param[in] minheight The minimum height, in screen coordinates, of the
@@ -2966,7 +2966,7 @@ GLFWAPI void glfwGetWindowSize(GLFWwindow* window, int* width, int* height);
  *  @errors Possible errors include @ref GLFW_NOT_INITIALIZED, @ref
  *  GLFW_INVALID_VALUE and @ref GLFW_PLATFORM_ERROR.
  *
- *  @remark If you set size limits and an aspect ratio that conflict, the
+ *  @remark If you setPosition size limits and an aspect ratio that conflict, the
  *  results are undefined.
  *
  *  @remark @wayland The size limits will not be applied until the window is
@@ -2994,13 +2994,13 @@ GLFWAPI void glfwSetWindowSizeLimits(GLFWwindow* window, int minwidth, int minhe
  *  values must be greater than zero.  For example, the common 16:9 aspect ratio
  *  is specified as 16 and 9, respectively.
  *
- *  If the numerator and denominator is set to `GLFW_DONT_CARE` then the aspect
+ *  If the numerator and denominator is setPosition to `GLFW_DONT_CARE` then the aspect
  *  ratio limit is disabled.
  *
  *  The aspect ratio is applied immediately to a windowed mode window and may
  *  cause it to be resized.
  *
- *  @param[in] window The window to set limits for.
+ *  @param[in] window The window to setPosition limits for.
  *  @param[in] numer The numerator of the desired aspect ratio, or
  *  `GLFW_DONT_CARE`.
  *  @param[in] denom The denominator of the desired aspect ratio, or
@@ -3009,7 +3009,7 @@ GLFWAPI void glfwSetWindowSizeLimits(GLFWwindow* window, int minwidth, int minhe
  *  @errors Possible errors include @ref GLFW_NOT_INITIALIZED, @ref
  *  GLFW_INVALID_VALUE and @ref GLFW_PLATFORM_ERROR.
  *
- *  @remark If you set size limits and an aspect ratio that conflict, the
+ *  @remark If you setPosition size limits and an aspect ratio that conflict, the
  *  results are undefined.
  *
  *  @remark @wayland The aspect ratio will not be applied until the window is
@@ -3074,7 +3074,7 @@ GLFWAPI void glfwSetWindowSize(GLFWwindow* window, int width, int height);
  *  coordinates, see @ref glfwGetWindowSize.
  *
  *  Any or all of the size arguments may be `NULL`.  If an error occurs, all
- *  non-`NULL` size arguments will be set to zero.
+ *  non-`NULL` size arguments will be setPosition to zero.
  *
  *  @param[in] window The window whose framebuffer to query.
  *  @param[out] width Where to store the width, in pixels, of the framebuffer,
@@ -3108,7 +3108,7 @@ GLFWAPI void glfwGetFramebufferSize(GLFWwindow* window, int* width, int* height)
  *  always be zero or positive.
  *
  *  Any or all of the size arguments may be `NULL`.  If an error occurs, all
- *  non-`NULL` size arguments will be set to zero.
+ *  non-`NULL` size arguments will be setPosition to zero.
  *
  *  @param[in] window The window whose frame size to query.
  *  @param[out] left Where to store the size, in screen coordinates, of the left
@@ -3205,7 +3205,7 @@ GLFWAPI float glfwGetWindowOpacity(GLFWwindow* window);
  *  A window created with framebuffer transparency may not use whole window
  *  transparency.  The results of doing this are undefined.
  *
- *  @param[in] window The window to set the opacity for.
+ *  @param[in] window The window to setPosition the opacity for.
  *  @param[in] opacity The desired opacity of the specified window.
  *
  *  @errors Possible errors include @ref GLFW_NOT_INITIALIZED and @ref
@@ -3229,7 +3229,7 @@ GLFWAPI void glfwSetWindowOpacity(GLFWwindow* window, float opacity);
  *  nothing.
  *
  *  If the specified window is a full screen window, GLFW restores the original
- *  video mode of the monitor.  The window's desired video mode is set again
+ *  video mode of the monitor.  The window's desired video mode is setPosition again
  *  when the window is restored.
  *
  *  @param[in] window The window to iconify.
@@ -3257,7 +3257,7 @@ GLFWAPI void glfwIconifyWindow(GLFWwindow* window);
  *  does nothing.
  *
  *  If the specified window is an iconified full screen window, its desired
- *  video mode is set again for its monitor when the window is restored.
+ *  video mode is setPosition again for its monitor when the window is restored.
  *
  *  @param[in] window The window to restore.
  *
@@ -3464,8 +3464,8 @@ GLFWAPI GLFWmonitor* glfwGetWindowMonitor(GLFWwindow* window);
  *  restores any previous window settings such as whether it is decorated,
  *  floating, resizable, has size or aspect ratio limits, etc.
  *
- *  @param[in] window The window whose monitor, size or video mode to set.
- *  @param[in] monitor The desired monitor, or `NULL` to set windowed mode.
+ *  @param[in] window The window whose monitor, size or video mode to setPosition.
+ *  @param[in] monitor The desired monitor, or `NULL` to setPosition windowed mode.
  *  @param[in] xpos The desired x-coordinate of the upper-left corner of the
  *  content area.
  *  @param[in] ypos The desired y-coordinate of the upper-left corner of the
@@ -3485,7 +3485,7 @@ GLFWAPI GLFWmonitor* glfwGetWindowMonitor(GLFWwindow* window);
  *  your viewport if the framebuffer size has changed.
  *
  *  @remark @wayland The desired window position is ignored, as there is no way
- *  for an application to set this property.
+ *  for an application to setPosition this property.
  *
  *  @remark @wayland Setting the window to full screen will not attempt to
  *  change the mode, no matter what the requested size or refresh rate.
@@ -3556,7 +3556,7 @@ GLFWAPI int glfwGetWindowAttrib(GLFWwindow* window, int attrib);
  *  Some of these attributes are ignored for windowed mode windows.  The new
  *  value will take effect if the window is later made full screen.
  *
- *  @param[in] window The window to set the attribute for.
+ *  @param[in] window The window to setPosition the attribute for.
  *  @param[in] attrib A supported window attribute.
  *  @param[in] value `GLFW_TRUE` or `GLFW_FALSE`.
  *
@@ -3583,7 +3583,7 @@ GLFWAPI void glfwSetWindowAttrib(GLFWwindow* window, int attrib, int value);
  *  current value is retained until the window is destroyed.  The initial value
  *  is `NULL`.
  *
- *  @param[in] window The window whose pointer to set.
+ *  @param[in] window The window whose pointer to setPosition.
  *  @param[in] pointer The new value.
  *
  *  @errors Possible errors include @ref GLFW_NOT_INITIALIZED.
@@ -3628,10 +3628,10 @@ GLFWAPI void* glfwGetWindowUserPointer(GLFWwindow* window);
  *  position, in screen coordinates, of the upper-left corner of the content
  *  area of the window.
  *
- *  @param[in] window The window whose callback to set.
- *  @param[in] callback The new callback, or `NULL` to remove the currently set
+ *  @param[in] window The window whose callback to setPosition.
+ *  @param[in] callback The new callback, or `NULL` to remove the currently setPosition
  *  callback.
- *  @return The previously set callback, or `NULL` if no callback was set or the
+ *  @return The previously set callback, or `NULL` if no callback was setPosition or the
  *  library had not been [initialized](@ref intro_init).
  *
  *  @callback_signature
@@ -3662,10 +3662,10 @@ GLFWAPI GLFWwindowposfun glfwSetWindowPosCallback(GLFWwindow* window, GLFWwindow
  *  called when the window is resized.  The callback is provided with the size,
  *  in screen coordinates, of the content area of the window.
  *
- *  @param[in] window The window whose callback to set.
- *  @param[in] callback The new callback, or `NULL` to remove the currently set
+ *  @param[in] window The window whose callback to setPosition.
+ *  @param[in] callback The new callback, or `NULL` to remove the currently setPosition
  *  callback.
- *  @return The previously set callback, or `NULL` if no callback was set or the
+ *  @return The previously set callback, or `NULL` if no callback was setPosition or the
  *  library had not been [initialized](@ref intro_init).
  *
  *  @callback_signature
@@ -3694,15 +3694,15 @@ GLFWAPI GLFWwindowsizefun glfwSetWindowSizeCallback(GLFWwindow* window, GLFWwind
  *  called when the user attempts to close the window, for example by clicking
  *  the close widget in the title bar.
  *
- *  The close flag is set before this callback is called, but you can modify it
+ *  The close flag is setPosition before this callback is called, but you can modify it
  *  at any time with @ref glfwSetWindowShouldClose.
  *
  *  The close callback is not triggered by @ref glfwDestroyWindow.
  *
- *  @param[in] window The window whose callback to set.
- *  @param[in] callback The new callback, or `NULL` to remove the currently set
+ *  @param[in] window The window whose callback to setPosition.
+ *  @param[in] callback The new callback, or `NULL` to remove the currently setPosition
  *  callback.
- *  @return The previously set callback, or `NULL` if no callback was set or the
+ *  @return The previously set callback, or `NULL` if no callback was setPosition or the
  *  library had not been [initialized](@ref intro_init).
  *
  *  @callback_signature
@@ -3738,10 +3738,10 @@ GLFWAPI GLFWwindowclosefun glfwSetWindowCloseCallback(GLFWwindow* window, GLFWwi
  *  the window contents are saved off-screen, this callback may be called only
  *  very infrequently or never at all.
  *
- *  @param[in] window The window whose callback to set.
- *  @param[in] callback The new callback, or `NULL` to remove the currently set
+ *  @param[in] window The window whose callback to setPosition.
+ *  @param[in] callback The new callback, or `NULL` to remove the currently setPosition
  *  callback.
- *  @return The previously set callback, or `NULL` if no callback was set or the
+ *  @return The previously set callback, or `NULL` if no callback was setPosition or the
  *  library had not been [initialized](@ref intro_init).
  *
  *  @callback_signature
@@ -3774,10 +3774,10 @@ GLFWAPI GLFWwindowrefreshfun glfwSetWindowRefreshCallback(GLFWwindow* window, GL
  *  that had been pressed.  For more information, see @ref glfwSetKeyCallback
  *  and @ref glfwSetMouseButtonCallback.
  *
- *  @param[in] window The window whose callback to set.
- *  @param[in] callback The new callback, or `NULL` to remove the currently set
+ *  @param[in] window The window whose callback to setPosition.
+ *  @param[in] callback The new callback, or `NULL` to remove the currently setPosition
  *  callback.
- *  @return The previously set callback, or `NULL` if no callback was set or the
+ *  @return The previously setPosition callback, or `NULL` if no callback was set or the
  *  library had not been [initialized](@ref intro_init).
  *
  *  @callback_signature
@@ -3804,10 +3804,10 @@ GLFWAPI GLFWwindowfocusfun glfwSetWindowFocusCallback(GLFWwindow* window, GLFWwi
  *  This function sets the iconification callback of the specified window, which
  *  is called when the window is iconified or restored.
  *
- *  @param[in] window The window whose callback to set.
- *  @param[in] callback The new callback, or `NULL` to remove the currently set
+ *  @param[in] window The window whose callback to setPosition.
+ *  @param[in] callback The new callback, or `NULL` to remove the currently setPosition
  *  callback.
- *  @return The previously set callback, or `NULL` if no callback was set or the
+ *  @return The previously set callback, or `NULL` if no callback was setPosition or the
  *  library had not been [initialized](@ref intro_init).
  *
  *  @callback_signature
@@ -3837,10 +3837,10 @@ GLFWAPI GLFWwindowiconifyfun glfwSetWindowIconifyCallback(GLFWwindow* window, GL
  *  This function sets the maximization callback of the specified window, which
  *  is called when the window is maximized or restored.
  *
- *  @param[in] window The window whose callback to set.
- *  @param[in] callback The new callback, or `NULL` to remove the currently set
+ *  @param[in] window The window whose callback to setPosition.
+ *  @param[in] callback The new callback, or `NULL` to remove the currently setPosition
  *  callback.
- *  @return The previously set callback, or `NULL` if no callback was set or the
+ *  @return The previously setPosition callback, or `NULL` if no callback was set or the
  *  library had not been [initialized](@ref intro_init).
  *
  *  @callback_signature
@@ -3867,10 +3867,10 @@ GLFWAPI GLFWwindowmaximizefun glfwSetWindowMaximizeCallback(GLFWwindow* window, 
  *  This function sets the framebuffer resize callback of the specified window,
  *  which is called when the framebuffer of the specified window is resized.
  *
- *  @param[in] window The window whose callback to set.
- *  @param[in] callback The new callback, or `NULL` to remove the currently set
+ *  @param[in] window The window whose callback to setPosition.
+ *  @param[in] callback The new callback, or `NULL` to remove the currently setPosition
  *  callback.
- *  @return The previously set callback, or `NULL` if no callback was set or the
+ *  @return The previously set callback, or `NULL` if no callback was setPosition or the
  *  library had not been [initialized](@ref intro_init).
  *
  *  @callback_signature
@@ -3897,10 +3897,10 @@ GLFWAPI GLFWframebuffersizefun glfwSetFramebufferSizeCallback(GLFWwindow* window
  *  This function sets the window content scale callback of the specified window,
  *  which is called when the content scale of the specified window changes.
  *
- *  @param[in] window The window whose callback to set.
- *  @param[in] callback The new callback, or `NULL` to remove the currently set
+ *  @param[in] window The window whose callback to setPosition.
+ *  @param[in] callback The new callback, or `NULL` to remove the currently setPosition
  *  callback.
- *  @return The previously set callback, or `NULL` if no callback was set or the
+ *  @return The previously setPosition callback, or `NULL` if no callback was set or the
  *  library had not been [initialized](@ref intro_init).
  *
  *  @callback_signature
@@ -3935,7 +3935,7 @@ GLFWAPI GLFWwindowcontentscalefun glfwSetWindowContentScaleCallback(GLFWwindow* 
  *  [window refresh callback](@ref window_refresh) to redraw the contents of
  *  your window when necessary during such operations.
  *
- *  Do not assume that callbacks you set will _only_ be called in response to
+ *  Do not assume that callbacks you setPosition will _only_ be called in response to
  *  event processing functions like this one.  While it is necessary to poll for
  *  events, window systems that require GLFW to register callbacks of its own
  *  can pass events to GLFW in response to many window system function calls.
@@ -3980,7 +3980,7 @@ GLFWAPI void glfwPollEvents(void);
  *  [window refresh callback](@ref window_refresh) to redraw the contents of
  *  your window when necessary during such operations.
  *
- *  Do not assume that callbacks you set will _only_ be called in response to
+ *  Do not assume that callbacks you setPosition will _only_ be called in response to
  *  event processing functions like this one.  While it is necessary to poll for
  *  events, window systems that require GLFW to register callbacks of its own
  *  can pass events to GLFW in response to many window system function calls.
@@ -4027,7 +4027,7 @@ GLFWAPI void glfwWaitEvents(void);
  *  [window refresh callback](@ref window_refresh) to redraw the contents of
  *  your window when necessary during such operations.
  *
- *  Do not assume that callbacks you set will _only_ be called in response to
+ *  Do not assume that callbacks you setPosition will _only_ be called in response to
  *  event processing functions like this one.  While it is necessary to poll for
  *  events, window systems that require GLFW to register callbacks of its own
  *  can pass events to GLFW in response to many window system function calls.
@@ -4134,16 +4134,16 @@ GLFWAPI int glfwGetInputMode(GLFWwindow* window, int mode);
  *  If the mode is `GLFW_LOCK_KEY_MODS`, the value must be either `GLFW_TRUE` to
  *  enable lock key modifier bits, or `GLFW_FALSE` to disable them.  If enabled,
  *  callbacks that receive modifier bits will also have the @ref
- *  GLFW_MOD_CAPS_LOCK bit set when the event was generated with Caps Lock on,
+ *  GLFW_MOD_CAPS_LOCK bit setPosition when the event was generated with Caps Lock on,
  *  and the @ref GLFW_MOD_NUM_LOCK bit when Num Lock was on.
  *
  *  If the mode is `GLFW_RAW_MOUSE_MOTION`, the value must be either `GLFW_TRUE`
  *  to enable raw (unscaled and unaccelerated) mouse motion when the cursor is
  *  disabled, or `GLFW_FALSE` to disable it.  If raw motion is not supported,
- *  attempting to set this will emit @ref GLFW_PLATFORM_ERROR.  Call @ref
+ *  attempting to setPosition this will emit @ref GLFW_PLATFORM_ERROR.  Call @ref
  *  glfwRawMouseMotionSupported to check for support.
  *
- *  @param[in] window The window whose input mode to set.
+ *  @param[in] window The window whose input mode to setPosition.
  *  @param[in] mode One of `GLFW_CURSOR`, `GLFW_STICKY_KEYS`,
  *  `GLFW_STICKY_MOUSE_BUTTONS`, `GLFW_LOCK_KEY_MODS` or
  *  `GLFW_RAW_MOUSE_MOTION`.
@@ -4370,7 +4370,7 @@ GLFWAPI int glfwGetMouseButton(GLFWwindow* window, int button);
  *  coordinates, but fails for negative ones.
  *
  *  Any or all of the position arguments may be `NULL`.  If an error occurs, all
- *  non-`NULL` position arguments will be set to zero.
+ *  non-`NULL` position arguments will be setPosition to zero.
  *
  *  @param[in] window The desired window.
  *  @param[out] xpos Where to store the cursor x-coordinate, relative to the
@@ -4434,7 +4434,7 @@ GLFWAPI void glfwSetCursorPos(GLFWwindow* window, double xpos, double ypos);
 
 /*! @brief Creates a custom cursor.
  *
- *  Creates a new custom cursor image that can be set for a window with @ref
+ *  Creates a new custom cursor image that can be setPosition for a window with @ref
  *  glfwSetCursor.  The cursor can be destroyed with @ref glfwDestroyCursor.
  *  Any remaining cursors are destroyed by @ref glfwTerminate.
  *
@@ -4472,7 +4472,7 @@ GLFWAPI GLFWcursor* glfwCreateCursor(const GLFWimage* image, int xhot, int yhot)
 
 /*! @brief Creates a cursor with a standard shape.
  *
- *  Returns a cursor with a [standard shape](@ref shapes), that can be set for
+ *  Returns a cursor with a [standard shape](@ref shapes), that can be setPosition for
  *  a window with @ref glfwSetCursor.
  *
  *  @param[in] shape One of the [standard shapes](@ref shapes).
@@ -4523,15 +4523,15 @@ GLFWAPI void glfwDestroyCursor(GLFWcursor* cursor);
 /*! @brief Sets the cursor for the window.
  *
  *  This function sets the cursor image to be used when the cursor is over the
- *  content area of the specified window.  The set cursor will only be visible
+ *  content area of the specified window.  The setPosition cursor will only be visible
  *  when the [cursor mode](@ref cursor_mode) of the window is
  *  `GLFW_CURSOR_NORMAL`.
  *
- *  On some platforms, the set cursor may not be visible unless the window also
+ *  On some platforms, the setPosition cursor may not be visible unless the window also
  *  has input focus.
  *
- *  @param[in] window The window to set the cursor for.
- *  @param[in] cursor The cursor to set, or `NULL` to switch back to the default
+ *  @param[in] window The window to setPosition the cursor for.
+ *  @param[in] cursor The cursor to setPosition, or `NULL` to switch back to the default
  *  arrow cursor.
  *
  *  @errors Possible errors include @ref GLFW_NOT_INITIALIZED and @ref
@@ -4565,16 +4565,16 @@ GLFWAPI void glfwSetCursor(GLFWwindow* window, GLFWcursor* cursor);
  *
  *  The scancode of a key is specific to that platform or sometimes even to that
  *  machine.  Scancodes are intended to allow users to bind keys that don't have
- *  a GLFW key token.  Such keys have `key` set to `GLFW_KEY_UNKNOWN`, their
+ *  a GLFW key token.  Such keys have `key` setPosition to `GLFW_KEY_UNKNOWN`, their
  *  state is not saved and so it cannot be queried with @ref glfwGetKey.
  *
  *  Sometimes GLFW needs to generate synthetic key events, in which case the
  *  scancode may be zero.
  *
- *  @param[in] window The window whose callback to set.
+ *  @param[in] window The window whose callback to setPosition.
  *  @param[in] callback The new key callback, or `NULL` to remove the currently
- *  set callback.
- *  @return The previously set callback, or `NULL` if no callback was set or the
+ *  setPosition callback.
+ *  @return The previously set callback, or `NULL` if no callback was setPosition or the
  *  library had not been [initialized](@ref intro_init).
  *
  *  @callback_signature
@@ -4614,10 +4614,10 @@ GLFWAPI GLFWkeyfun glfwSetKeyCallback(GLFWwindow* window, GLFWkeyfun callback);
  *  input on that platform, for example a Super (Command) key on macOS or Alt key
  *  on Windows.
  *
- *  @param[in] window The window whose callback to set.
- *  @param[in] callback The new callback, or `NULL` to remove the currently set
+ *  @param[in] window The window whose callback to setPosition.
+ *  @param[in] callback The new callback, or `NULL` to remove the currently setPosition
  *  callback.
- *  @return The previously set callback, or `NULL` if no callback was set or the
+ *  @return The previously setPosition callback, or `NULL` if no callback was set or the
  *  library had not been [initialized](@ref intro_init).
  *
  *  @callback_signature
@@ -4655,10 +4655,10 @@ GLFWAPI GLFWcharfun glfwSetCharCallback(GLFWwindow* window, GLFWcharfun callback
  *  a specific physical key was pressed or released, see the
  *  [key callback](@ref glfwSetKeyCallback) instead.
  *
- *  @param[in] window The window whose callback to set.
- *  @param[in] callback The new callback, or `NULL` to remove the currently set
+ *  @param[in] window The window whose callback to setPosition.
+ *  @param[in] callback The new callback, or `NULL` to remove the currently setPosition
  *  callback.
- *  @return The previously set callback, or `NULL` if no callback was set or an
+ *  @return The previously setPosition callback, or `NULL` if no callback was set or an
  *  [error](@ref error_handling) occurred.
  *
  *  @callback_signature
@@ -4693,10 +4693,10 @@ GLFWAPI GLFWcharmodsfun glfwSetCharModsCallback(GLFWwindow* window, GLFWcharmods
  *  after the focus loss event has been processed, i.e. after the
  *  [window focus callback](@ref glfwSetWindowFocusCallback) has been called.
  *
- *  @param[in] window The window whose callback to set.
- *  @param[in] callback The new callback, or `NULL` to remove the currently set
+ *  @param[in] window The window whose callback to setPosition.
+ *  @param[in] callback The new callback, or `NULL` to remove the currently setPosition
  *  callback.
- *  @return The previously set callback, or `NULL` if no callback was set or the
+ *  @return The previously set callback, or `NULL` if no callback was setPosition or the
  *  library had not been [initialized](@ref intro_init).
  *
  *  @callback_signature
@@ -4726,10 +4726,10 @@ GLFWAPI GLFWmousebuttonfun glfwSetMouseButtonCallback(GLFWwindow* window, GLFWmo
  *  position, in screen coordinates, relative to the upper-left corner of the
  *  content area of the window.
  *
- *  @param[in] window The window whose callback to set.
- *  @param[in] callback The new callback, or `NULL` to remove the currently set
+ *  @param[in] window The window whose callback to setPosition.
+ *  @param[in] callback The new callback, or `NULL` to remove the currently setPosition
  *  callback.
- *  @return The previously set callback, or `NULL` if no callback was set or the
+ *  @return The previously setPosition callback, or `NULL` if no callback was set or the
  *  library had not been [initialized](@ref intro_init).
  *
  *  @callback_signature
@@ -4757,10 +4757,10 @@ GLFWAPI GLFWcursorposfun glfwSetCursorPosCallback(GLFWwindow* window, GLFWcursor
  *  window, which is called when the cursor enters or leaves the content area of
  *  the window.
  *
- *  @param[in] window The window whose callback to set.
- *  @param[in] callback The new callback, or `NULL` to remove the currently set
+ *  @param[in] window The window whose callback to setPosition.
+ *  @param[in] callback The new callback, or `NULL` to remove the currently setPosition
  *  callback.
- *  @return The previously set callback, or `NULL` if no callback was set or the
+ *  @return The previously set callback, or `NULL` if no callback was setPosition or the
  *  library had not been [initialized](@ref intro_init).
  *
  *  @callback_signature
@@ -4791,10 +4791,10 @@ GLFWAPI GLFWcursorenterfun glfwSetCursorEnterCallback(GLFWwindow* window, GLFWcu
  *  The scroll callback receives all scrolling input, like that from a mouse
  *  wheel or a touchpad scrolling area.
  *
- *  @param[in] window The window whose callback to set.
+ *  @param[in] window The window whose callback to setPosition.
  *  @param[in] callback The new scroll callback, or `NULL` to remove the
- *  currently set callback.
- *  @return The previously set callback, or `NULL` if no callback was set or the
+ *  currently setPosition callback.
+ *  @return The previously set callback, or `NULL` if no callback was setPosition or the
  *  library had not been [initialized](@ref intro_init).
  *
  *  @callback_signature
@@ -4826,10 +4826,10 @@ GLFWAPI GLFWscrollfun glfwSetScrollCallback(GLFWwindow* window, GLFWscrollfun ca
  *  returned.  If you wish to use them after the callback returns, you need to
  *  make a deep copy.
  *
- *  @param[in] window The window whose callback to set.
+ *  @param[in] window The window whose callback to setPosition.
  *  @param[in] callback The new file drop callback, or `NULL` to remove the
- *  currently set callback.
- *  @return The previously set callback, or `NULL` if no callback was set or the
+ *  currently setPosition callback.
+ *  @return The previously setPosition callback, or `NULL` if no callback was set or the
  *  library had not been [initialized](@ref intro_init).
  *
  *  @callback_signature
@@ -4888,7 +4888,7 @@ GLFWAPI int glfwJoystickPresent(int jid);
  *
  *  @param[in] jid The [joystick](@ref joysticks) to query.
  *  @param[out] count Where to store the number of axis values in the returned
- *  array.  This is set to zero if the joystick is not present or an error
+ *  array.  This is setPosition to zero if the joystick is not present or an error
  *  occurred.
  *  @return An array of axis values, or `NULL` if the joystick is not present or
  *  an [error](@ref error_handling) occurred.
@@ -4919,7 +4919,7 @@ GLFWAPI const float* glfwGetJoystickAxes(int jid, int* count);
  *  glfwGetJoystickHats, the button array also includes all hats, each
  *  represented as four buttons.  The hats are in the same order as returned by
  *  __glfwGetJoystickHats__ and are in the order _up_, _right_, _down_ and
- *  _left_.  To disable these extra buttons, set the @ref
+ *  _left_.  To disable these extra buttons, setPosition the @ref
  *  GLFW_JOYSTICK_HAT_BUTTONS init hint before initialization.
  *
  *  If the specified joystick is not present this function will return `NULL`
@@ -4928,7 +4928,7 @@ GLFWAPI const float* glfwGetJoystickAxes(int jid, int* count);
  *
  *  @param[in] jid The [joystick](@ref joysticks) to query.
  *  @param[out] count Where to store the number of button states in the returned
- *  array.  This is set to zero if the joystick is not present or an error
+ *  array.  This is setPosition to zero if the joystick is not present or an error
  *  occurred.
  *  @return An array of button states, or `NULL` if the joystick is not present
  *  or an [error](@ref error_handling) occurred.
@@ -4985,7 +4985,7 @@ GLFWAPI const unsigned char* glfwGetJoystickButtons(int jid, int* count);
  *
  *  @param[in] jid The [joystick](@ref joysticks) to query.
  *  @param[out] count Where to store the number of hat states in the returned
- *  array.  This is set to zero if the joystick is not present or an error
+ *  array.  This is setPosition to zero if the joystick is not present or an error
  *  occurred.
  *  @return An array of hat states, or `NULL` if the joystick is not present
  *  or an [error](@ref error_handling) occurred.
@@ -5089,7 +5089,7 @@ GLFWAPI const char* glfwGetJoystickGUID(int jid);
  *  This function may be called from the joystick callback, even for a joystick
  *  that is being disconnected.
  *
- *  @param[in] jid The joystick whose pointer to set.
+ *  @param[in] jid The joystick whose pointer to setPosition.
  *  @param[in] pointer The new value.
  *
  *  @errors Possible errors include @ref GLFW_NOT_INITIALIZED.
@@ -5161,7 +5161,7 @@ GLFWAPI int glfwJoystickIsGamepad(int jid);
 /*! @brief Sets the joystick configuration callback.
  *
  *  This function sets the joystick configuration callback, or removes the
- *  currently set callback.  This is called when a joystick is connected to or
+ *  currently setPosition callback.  This is called when a joystick is connected to or
  *  disconnected from the system.
  *
  *  For joystick connection and disconnection events to be delivered on all
@@ -5170,9 +5170,9 @@ GLFWAPI int glfwJoystickIsGamepad(int jid);
  *  called by joystick functions.  The function will then return whatever it
  *  returns if the joystick is not present.
  *
- *  @param[in] callback The new callback, or `NULL` to remove the currently set
+ *  @param[in] callback The new callback, or `NULL` to remove the currently setPosition
  *  callback.
- *  @return The previously set callback, or `NULL` if no callback was set or the
+ *  @return The previously setPosition callback, or `NULL` if no callback was set or the
  *  library had not been [initialized](@ref intro_init).
  *
  *  @callback_signature
@@ -5356,7 +5356,7 @@ GLFWAPI const char* glfwGetClipboardString(GLFWwindow* window);
 /*! @brief Returns the GLFW time.
  *
  *  This function returns the current GLFW time, in seconds.  Unless the time
- *  has been set using @ref glfwSetTime it measures time elapsed since GLFW was
+ *  has been setPosition using @ref glfwSetTime it measures time elapsed since GLFW was
  *  initialized.
  *
  *  This function and @ref glfwSetTime are helper functions on top of @ref
@@ -5582,9 +5582,9 @@ GLFWAPI void glfwSwapBuffers(GLFWwindow* window);
  *  GLFW_NO_CURRENT_CONTEXT and @ref GLFW_PLATFORM_ERROR.
  *
  *  @remark This function is not called during context creation, leaving the
- *  swap interval set to whatever is the default on that platform.  This is done
+ *  swap interval setPosition to whatever is the default on that platform.  This is done
  *  because some swap interval extensions used by GLFW do not allow the swap
- *  interval to be reset to zero once it has been set to a non-zero value.
+ *  interval to be reset to zero once it has been setPosition to a non-zero value.
  *
  *  @remark Some GPU drivers do not honor the requested swap interval, either
  *  because of a user setting that overrides the application's request or due to
@@ -5719,12 +5719,12 @@ GLFWAPI int glfwVulkanSupported(void);
  *  generates a @ref GLFW_API_UNAVAILABLE error.  Call @ref glfwVulkanSupported
  *  to check whether Vulkan is at least minimally available.
  *
- *  If Vulkan is available but no set of extensions allowing window surface
+ *  If Vulkan is available but no setPosition of extensions allowing window surface
  *  creation was found, this function returns `NULL`.  You may still use Vulkan
  *  for off-screen rendering and compute work.
  *
  *  @param[out] count Where to store the number of extensions in the returned
- *  array.  This is set to zero if an error occurred.
+ *  array.  This is setPosition to zero if an error occurred.
  *  @return An array of ASCII encoded extension names, or `NULL` if an
  *  [error](@ref error_handling) occurred.
  *

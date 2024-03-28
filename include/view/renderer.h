@@ -14,7 +14,7 @@
 
 #include "view/view_settings.h"
 #include "view/task_queue.h"
-#include "view/controller.h"
+#include "controller/controller.h"
 
 namespace shader_types {
 	struct InstanceData {
@@ -226,7 +226,7 @@ void Renderer<ShapeType>::draw(MTK::View *pView) {
 	auto *pInstanceData = reinterpret_cast< shader_types::InstanceData *>( pInstanceDataBuffer->contents());
 	for (size_t i = 0; i < _pShapes.size(); ++i) {
 		pInstanceData[i].instanceTransform = *(_pShapes[i]->transform);
-		pInstanceData[i].instanceColor = (float4) {0, 1, 0, 1.0f};
+		pInstanceData[i].instanceColor = (float4) {0, 0, 1, 1.0f};
 	}
 	pInstanceDataBuffer->didModifyRange(NS::Range::Make(0, pInstanceDataBuffer->length()));
 

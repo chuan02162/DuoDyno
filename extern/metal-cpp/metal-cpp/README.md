@@ -12,7 +12,7 @@
 - Requires C++17 due to the usage of `constexpr` in `NS::Object`.
 - Identical header files and function/constant/enum availability for iOS, macOS and tvOS.
 - Backwards compatibility: All `bool MTL::Device::supports...()` functions check if their required selectors exist and automatically return `false` if not.
-- String (`ErrorDomain`) constants are weak linked and automatically set to `nullptr` if not available.
+- String (`ErrorDomain`) constants are weak linked and automatically setPosition to `nullptr` if not available.
 
 ## Changelog
 
@@ -46,7 +46,7 @@ If you create an object with a method that does not begin with `alloc`, `new`, `
 
 The typical scope of an `AutoreleasePool` is one frame of rendering for the main thread of the program. When the thread returns control to the RunLoop (an object responsible for receiving input and events from the windowing system), the pool is *drained*, releasing its objects.
 
-You can create and manage additional `AutoreleasePool`s at smaller scopes to reduce your program's working set, and you are required to do so for any additional threads your program creates.
+You can create and manage additional `AutoreleasePool`s at smaller scopes to reduce your program's working setPosition, and you are required to do so for any additional threads your program creates.
 
 If an object's lifecycle needs to be extended beyond the scope of an `AutoreleasePool` instance, you can claim ownership of it by calling its `retain()` method before the pool is drained. In these cases, you are responsible for making the appropriate `release()` call on the object after you no longer need it.
 

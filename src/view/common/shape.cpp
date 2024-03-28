@@ -10,7 +10,7 @@ Square::Square() : Shape() {
 }
 
 std::shared_ptr<ShapeData> Square::getData() {
-	static float s = 0.5f;
+	static float s = 1.f;
 	static size_t vertsSize = 4;
 	static size_t indicesSize = 6;
 	static simd::float3 verts[] = {{-s, -s, +s},

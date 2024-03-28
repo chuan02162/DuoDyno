@@ -9,23 +9,33 @@
 #include "collider.h"
 #include "engine/common/math_util.h"
 
+enum class BodyType{
+	Dynamic,
+	Static,
+	Kinematic
+};
+
 class Body{
 public:
 	Body();
-	void addForce(simd::float2 force);
-	void update(float dt);
-	void set(simd::float2 position);
-	void log();
+	void setPosition(Vec2 position);
+	void setRotation(float rotate);
+	void setScale(Vec2 scale) const;
+	void setMass(float mass);
+	void addVelocity(Vec2 velocity);
+	void addAngularVelocity(float angularVelocity);
+	void log() const;
 	Vec2 force{};
-	Vec2 velocity{};
+	Vec2 _velocity{};
 	Vec2 position{};
 	float rotation;
-	float mass=1, invMass=1;
+	float _mass=1, _invMass=1;
 	float I, invI;
-	float angularVelocity;
+	float _angularVelocity;
 	float torque;
 	float friction;
-	std::shared_ptr<Collider> collider=std::make_shared<Collider>(Vec2(0.1,0.1));
+	BodyType type{BodyType::Dynamic};
+	std::unique_ptr<Collider> collider=std::make_unique<Collider>(Vec2(10,10));
 };
 
 #endif //DUODYNO_BODY_H

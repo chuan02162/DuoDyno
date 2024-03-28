@@ -11,7 +11,6 @@
 #include<vector>
 
 struct ShapeData{
-	float s = 0.5f;
 	std::shared_ptr<std::vector<simd::float3>> _pVerts;
 	std::shared_ptr<std::vector<uint16_t>> _pIndices;
 	ShapeData(simd::float3 verts[], uint16_t indices[], size_t vertsSize, size_t indicesSize);

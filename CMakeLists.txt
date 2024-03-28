@@ -31,6 +31,8 @@ add_executable(sample main.cpp
 		src/engine/physics/collide.cpp
 		include/engine/common/math_util.h
 		src/engine/physics/collider.cpp
+		include/controller/adapter.h
+		src/controller/adapter.cpp
 )
 target_link_libraries(sample PUBLIC glfw glad METAL_CPP ${OPENGL_LIBRARIES})
 target_include_directories(sample PRIVATE include)

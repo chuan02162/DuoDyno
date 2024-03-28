@@ -4,6 +4,7 @@
 
 #ifndef DUODYNO_CONTROLLER_H
 #define DUODYNO_CONTROLLER_H
+#include "controller/adapter.h"
 
 class Controller{
 public:
