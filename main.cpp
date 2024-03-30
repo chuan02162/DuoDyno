@@ -6,30 +6,31 @@
 
 int main() {
 	auto world = World::getInstance();
-	auto body1 = std::make_shared<Body>();
-	auto body2 = std::make_shared<Body>();
-	auto body3 = std::make_shared<Body>();
-	body2->_velocity = Vec2(10, 0);
-//	body2->angularVelocity=2;
-	body1->setScale({200,10});
-	body2->setScale({10, 20});
-	body3->setScale({10, 10});
+	vector<shared_ptr<Body>> bodies;
+	int n = 5;
+	for (int i = 1; i <= n; ++i) {
+		for (int j = 1; j <= n - i + 1; ++j) {
+			auto body = make_shared<Body>();
+			body->setPosition({float(-70 + 10 * i + j * 10),float(-85+(i-1)*10)});
+			body->setScale({10,10});
+			world->addBody(body);
+		}
+	}
+	auto floor = std::make_shared<Body>();
+	auto bullet = std::make_shared<Body>();
+	bullet->setPosition({-90,-80});
+	bullet->setMass(100);
+	bullet->setScale({20,20});
+	bullet->friction=0.1;
+	bullet->_velocity=Vec2(25,0);
+	floor->setScale({200, 10});
 
-//	body2->setRotation(-0.1);
-//	body2->setRotation(0);
-	body1->type=BodyType::Static;
-	body1->setMass(1e9);
-	body1->setPosition({0,-85});
-	body2->setPosition(Vec2{-20.f, 65.f});
-	body3->setPosition(Vec2{10.f, 79.9});
+	floor->type = BodyType::Static;
+	floor->setMass(1e9);
+	floor->setPosition({0, -95});
 
-	body1->friction=0.5;
-	body2->friction=0.5;
-	body3->friction=0.5;
-
-	world->addBody(body1);
-	world->addBody(body2);
-	world->addBody(body3);
+	world->addBody(floor);
+	world->addBody(bullet);
 
 	NS::AutoreleasePool *pAutoreleasePool = NS::AutoreleasePool::alloc()->init();
 

@@ -243,7 +243,6 @@ void Collider::narrowPhase(vector<shared_ptr<Contact>> &ret, const unique_ptr<Co
 	int numContacts = 0;
 	for (auto &point: clipPoints2) {
 		separation = Dot(frontNormal, point.v) - front;
-		cout<<separation<<endl;
 		if (separation <= 0) {
 			ret.push_back(std::make_shared<Contact>());
 			ret[numContacts]->separation = separation;
@@ -255,5 +254,4 @@ void Collider::narrowPhase(vector<shared_ptr<Contact>> &ret, const unique_ptr<Co
 			++numContacts;
 		}
 	}
-	cout<<"::::::"<<endl;
 }

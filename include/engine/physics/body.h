@@ -33,7 +33,7 @@ public:
 	float I, invI;
 	float _angularVelocity;
 	float torque;
-	float friction;
+	float friction=0.3;
 	BodyType type{BodyType::Dynamic};
 	std::unique_ptr<Collider> collider=std::make_unique<Collider>(Vec2(10,10));
 };

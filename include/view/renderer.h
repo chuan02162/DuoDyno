@@ -36,9 +36,9 @@ public:
 
 	void draw(MTK::View *pView);
 
-	void addShape(std::shared_ptr<Shape> shape);
+	void addShape(std::shared_ptr <Shape> shape);
 
-	void updatePosition(int index, std::shared_ptr<simd::float4x4> trans);
+	void updatePosition(int index, std::shared_ptr <simd::float4x4> trans);
 
 private:
 	MTL::Device *_pDevice;
@@ -48,11 +48,13 @@ private:
 	MTL::Buffer *_pVertexDataBuffer{};
 	MTL::Buffer *_pInstanceDataBuffer[view_settings::kMaxFramesInFlight]{};
 	MTL::Buffer *_pIndexBuffer{};
+	MTL::Buffer *_borderBuffer[view_settings::kMaxFramesInFlight]{};
+	MTL::Buffer *_borderIndexBuffer{};
 	float _angle;
 	dispatch_semaphore_t _semaphore;
 	int _frame;
 	size_t _pNumCapacity;
-	std::vector<std::shared_ptr<Shape>> _pShapes;
+	std::vector <std::shared_ptr<Shape>> _pShapes;
 	static const int kMaxFramesInFlight = 3;
 };
 
@@ -65,6 +67,10 @@ Renderer<ShapeType>::Renderer(MTL::Device *pDevice)
 	buildShaders();
 	buildBuffers();
 	_semaphore = dispatch_semaphore_create(view_settings::kMaxFramesInFlight);
+	uint16_t indices[] = {0, 1, 2, 3, 0};
+	auto borderIndicesSize = sizeof(uint16_t) * 5;
+	_borderIndexBuffer = _pDevice->newBuffer(borderIndicesSize, MTL::ResourceStorageModeManaged);
+	memcpy(_borderIndexBuffer->contents(), indices, borderIndicesSize);
 }
 
 template<class ShapeType>
@@ -155,10 +161,10 @@ void Renderer<ShapeType>::buildBuffers() {
 	using simd::float4;
 	using simd::float4x4;
 
-	auto shapeData=ShapeType::getData();
+	auto shapeData = ShapeType::getData();
 
-	auto vertexBufferSize=sizeof(simd::float3)*(shapeData->_pVerts->size());
-	auto indicesBufferSize=sizeof(uint16_t)*(shapeData->_pIndices->size());
+	auto vertexBufferSize = sizeof(simd::float3) * (shapeData->_pVerts->size());
+	auto indicesBufferSize = sizeof(uint16_t) * (shapeData->_pIndices->size());
 
 
 	MTL::Buffer *pVertexBuffer = _pDevice->newBuffer(vertexBufferSize, MTL::ResourceStorageModeManaged);
@@ -175,10 +181,16 @@ void Renderer<ShapeType>::buildBuffers() {
 	_pIndexBuffer->didModifyRange(NS::Range::Make(0, _pIndexBuffer->length()));
 
 	const size_t instanceDataSize = _pNumCapacity * sizeof(shader_types::InstanceData);
+	cout << _pNumCapacity << endl;
 	for (auto &i: _pInstanceDataBuffer) {
 		i->release();
 		i = _pDevice->newBuffer(instanceDataSize, MTL::ResourceStorageModeManaged);
 	}
+	for (auto &i: _borderBuffer) {
+		i->release();
+		i = _pDevice->newBuffer(instanceDataSize, MTL::ResourceStorageModeManaged);
+	}
+
 }
 
 template<class ShapeType>
@@ -242,23 +254,38 @@ void Renderer<ShapeType>::draw(MTK::View *pView) {
 								_pIndexBuffer,
 								0,
 								_pShapes.size());
+	auto borderBuffer = _borderBuffer[_frame];
+	auto *borderData = reinterpret_cast< shader_types::InstanceData *>(borderBuffer->contents());
+	for (size_t i = 0; i < _pShapes.size(); ++i) {
+		borderData[i].instanceTransform = *(_pShapes[i]->transform);
+		borderData[i].instanceColor = (float4) {1, 165.f / 255, 0, 1.0f};
+	}
+	borderBuffer->didModifyRange(NS::Range::Make(0, borderBuffer->length()));
+//
+	pEnc->setVertexBuffer(borderBuffer, 0, 1);
+	pEnc->drawIndexedPrimitives(MTL::PrimitiveType::PrimitiveTypeLineStrip,
+								5, MTL::IndexType::IndexTypeUInt16,
+								_borderIndexBuffer,
+								0,
+								_pShapes.size());
 
 	pEnc->endEncoding();
 	pCmd->presentDrawable(pView->currentDrawable());
 	pCmd->commit();
-
 	pPool->release();
 }
 
 template<class ShapeType>
-void Renderer<ShapeType>::addShape(std::shared_ptr<Shape> shape) {
-	if (_pShapes.size() >= _pNumCapacity)
+void Renderer<ShapeType>::addShape(std::shared_ptr <Shape> shape) {
+	if (_pShapes.size() >= _pNumCapacity) {
+		_pNumCapacity <<= 1;
 		buildBuffers();
+	}
 	_pShapes.push_back(std::move(shape));
 }
 
 template<class ShapeType>
-void Renderer<ShapeType>::updatePosition(int index, std::shared_ptr<simd::float4x4> trans) {
+void Renderer<ShapeType>::updatePosition(int index, std::shared_ptr <simd::float4x4> trans) {
 	if (index >= _pShapes.size()) {
 		std::cout << "Wrong index at updatePosition" << std::endl;
 		return;

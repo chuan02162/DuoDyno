@@ -20,7 +20,6 @@ public:
 	static std::shared_ptr<World> getInstance();
 	void addBody(std::shared_ptr<Body> &body);
 	void step(float dt);
-//	void broadPhase();
 	std::vector<std::shared_ptr<Body>> bodies;
 	static bool accumulateImpulses;
 	static bool warmStarting;
