@@ -10,11 +10,16 @@
 #include "engine/physics/world.h"
 #include <simd/simd.h>
 
-class SquareAdapter : public Square{
+class Adapter : public Shape {
 public:
-	SquareAdapter(std::shared_ptr<Body> &body);
-private:
-	std::shared_ptr<Body> _body;
+	virtual void init(std::shared_ptr<Body> body) = 0;
 };
+
+class SquareAdapter : public Adapter {
+public:
+	void init(std::shared_ptr<Body> body) override;
+};
+
+std::shared_ptr<Adapter> getShape(const std::string &name);
 
 #endif //DUODYNO_ADAPTER_H

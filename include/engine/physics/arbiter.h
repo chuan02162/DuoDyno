@@ -42,7 +42,7 @@ struct Contact {
 };
 
 struct ArbiterKey {
-	ArbiterKey(shared_ptr<Body> b1, shared_ptr<Body> b2) {
+	ArbiterKey(const shared_ptr<Body> b1, const shared_ptr<Body> b2) {
 		if (b1 < b2) {
 			body1 = b1;
 			body2 = b2;
@@ -57,7 +57,7 @@ struct ArbiterKey {
 };
 
 struct Arbiter {
-	Arbiter(shared_ptr<Body> &b1, shared_ptr<Body> &b2);
+	Arbiter(shared_ptr<Body> b1, shared_ptr<Body> b2);
 
 	void Update(vector<shared_ptr<Contact>> &newContacts);
 
@@ -86,6 +86,5 @@ inline bool operator<(const ArbiterKey &a1, const ArbiterKey &a2) {
 	return false;
 }
 
-int Collide(Contact *contacts, const shared_ptr<Body> &body1, const shared_ptr<Body> &body2);
 
 #endif //DUODYNO_ARBITER_H

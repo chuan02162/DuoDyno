@@ -4,9 +4,25 @@
 
 #include "controller/adapter.h"
 
-SquareAdapter::SquareAdapter(std::shared_ptr<Body> &body) {
+class ShapeFactory {
+public:
+	std::shared_ptr<Adapter> createShape(const std::string &name) {
+		if (name == "Square") {
+			return std::make_shared<SquareAdapter>();
+		} else {
+			return std::make_shared<SquareAdapter>();
+		}
+	}
+};
+
+std::shared_ptr<Adapter> getShape(const std::string &name) {
+	static ShapeFactory shapeFactory;
+	return shapeFactory.createShape(name);
+}
+
+
+void SquareAdapter::init(std::shared_ptr<Body> body) {
 	using simd::float4x4, simd::float4;
-	_body = body;
 	auto world = World::getInstance();
 	auto pos = body->position;
 	auto scale = body->collider->scale;
@@ -35,4 +51,3 @@ SquareAdapter::SquareAdapter(std::shared_ptr<Body> &body) {
 	};
 	transform = make_shared<float4x4>(displacement * rotation * zoom);
 }
-//[0.0353694111,-0.0353412591,0,0],[0.0706825182,0.0707388222,0,0],[0,0,0,0],[0,0,0,1];

@@ -8,19 +8,19 @@
 #include<iostream>
 using namespace std;
 
-Arbiter::Arbiter(shared_ptr<Body> &b1, shared_ptr<Body> &b2) {
+Arbiter::Arbiter(shared_ptr<Body> b1, shared_ptr<Body> b2) {
 	if (b1 < b2)
 	{
-		body1 = b1;
-		body2 = b2;
+		body1 = std::move(b1);
+		body2 = std::move(b2);
 	}
 	else
 	{
-		body1 = b2;
-		body2 = b1;
+		body1 = std::move(b2);
+		body2 = std::move(b1);
 	}
-	auto &c1 = b1->collider;
-	auto &c2 = b2->collider;
+	auto &c1 = body1->collider;
+	auto &c2 = body2->collider;
 	if (c1->broadPhase(c2)) {
 		c1->narrowPhase(contacts, c2);
 	}

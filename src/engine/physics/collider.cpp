@@ -97,17 +97,14 @@ bool Collider::broadPhase(const std::unique_ptr<Collider> &x) {
 
 void Collider::narrowPhase(vector<shared_ptr<Contact>> &ret, const unique_ptr<Collider> &x) {
 	ret.clear();
-	auto CA = this;
-	auto &CB = x;
 
-	// Setup
 	Vec2 hA = 0.5 * scale;
-	Vec2 hB = 0.5 * CB->scale;
+	Vec2 hB = 0.5 * x->scale;
 
-	Vec2 posA = CA->position;
-	Vec2 posB = CB->position;
+	Vec2 posA = position;
+	Vec2 posB = x->position;
 
-	Mat22 RotA(CA->rotation), RotB(CB->rotation);
+	Mat22 RotA(rotation), RotB(x->rotation);
 
 	Mat22 RotAT = RotA.Transpose();
 	Mat22 RotBT = RotB.Transpose();

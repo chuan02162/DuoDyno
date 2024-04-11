@@ -207,7 +207,7 @@ void Renderer<ShapeType>::draw(MTK::View *pView) {
 		queueIns->pop();
 		switch (task->tt) {
 			case TaskType::Add: {
-				addShape(std::static_pointer_cast<Shape>(task->data));
+				addShape(std::static_pointer_cast<Shape>(static_pointer_cast<Adapter>(task->data)));
 				break;
 			}
 			case TaskType::Update: {
